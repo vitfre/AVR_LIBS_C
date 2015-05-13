@@ -1,0 +1,78 @@
+#include "buart.h"
+
+ISR(USART_RXC_vect)
+{
+	uint8_t byte;
+	uint8_t wr = (uart_rxwr+1) & UART_BUFEND;
+	byte = UDR;
+	if(wr != uart_rxrd)
+	{
+		uart_rx[uart_rxwr] = byte;
+		uart_rxwr = wr;
+	};
+};
+
+ISR(USART_UDRE_vect)
+{
+	uint8_t rd = uart_txrd;
+	if(rd != uart_txwr)
+	{
+		UDR = uart_tx[rd];
+		uart_txrd = (rd+1) & UART_BUFEND;
+		return;
+	};
+	UCSRB &= ~(1<<UDRIE);
+};
+
+uint8_t uart_rx_count()
+{
+	return (uart_rxwr-uart_rxrd) & UART_BUFEND;
+};
+
+uint8_t uart_read()
+{
+	uint8_t rd = uart_rxrd;
+	uint8_t byte;
+	if(rd != uart_rxwr)
+	{
+		byte = uart_rx[rd];
+		uart_rxrd = (rd+1) & UART_BUFEND;
+		return byte;
+	};
+	return 0;
+};
+
+void uart_write(uint8_t byte)
+{
+	uint8_t wr = (uart_txwr+1) & UART_BUFEND;
+	if(wr != uart_txrd)
+	{
+		uart_tx[uart_txwr] = byte;
+		uart_txwr = wr;
+		UCSRB |= (1<<UDRIE);
+	};
+};
+
+void uart_init()
+{
+	UBRRL = F_CPU/UART_RATE/16-1;
+	UBRRH = (F_CPU/UART_RATE/16-1)>>8;
+	UCSRB = (1<<RXCIE)|(1<<RXEN)|(1<<TXEN);
+	UCSRC = (1<<UPM0)|(1<<UPM1);
+};
+
+
+//****************************************************************************************
+//Send 14 bit data into USART
+//****************************************************************************************
+void  send_usart_14bit(unsigned int temp_usart_int)
+{
+	//---------------------------------------------------------------------------------------
+	temp_usart_int=temp_usart_int%1000;
+	uart_write((temp_usart_int/100)+0x30);
+	temp_usart_int=temp_usart_int%100;
+	uart_write((temp_usart_int/10)+0x30);
+	temp_usart_int=temp_usart_int%10;
+	uart_write(temp_usart_int+0x30);
+	//---------------------------------------------------------------------------------------
+ };

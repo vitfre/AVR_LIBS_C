@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Kit projectId="4" projectName="default" Technology="QTouch" DeviceVariant="40/44" QTouchDesignVersion="1.0" QTouchLibraryVersion="5.2.0.2090">
+  <KitLayout>
+    <KitSize width="400" height="400" kitPanelThickness="0.1" kitImage="" />
+    <Button id="0" name="Button0" width="11" height="11" positionX="0" positionY="0" fromChannel="0" toChannel="0" type="0" />
+    <Button id="1" name="Button1" width="11" height="11" positionX="15" positionY="0" fromChannel="1" toChannel="1" type="0" />
+    <Button id="2" name="Button2" width="11" height="11" positionX="30" positionY="0" fromChannel="2" toChannel="2" type="0" />
+  </KitLayout>
+  <TechnologySelectionOptions MoistureTolerant="false" NoiseImmune="false" />
+  <GlobalConfiguration recalibrationThreshold="1" detectIntegrationLimit="4" driftHoldTime="20" sensorMaximumDuration="0" negativeDriftRate="20" positiveDriftRate="5" libraryTimingSetting="0" measurementPeriod="50" positiveRecalibrationDelay="10" ticksPerMilliSec="63" />
+  <OtherOprtions delayCycle="1" powerOptimization="0" noiseCounter="" filterLevel="" autoOS="" />
+  <SensorConfigurations autoAssign="true">
+    <SensorConfiguration sensorType="1" fromChannel="0" toChannel="0" aksGroup="0" detectThreshold="10" detectHysteresis="3" positiveRecalibrationFlag="0" />
+    <SensorConfiguration sensorType="1" fromChannel="1" toChannel="1" aksGroup="0" detectThreshold="10" detectHysteresis="3" positiveRecalibrationFlag="0" />
+    <SensorConfiguration sensorType="1" fromChannel="2" toChannel="2" aksGroup="0" detectThreshold="10" detectHysteresis="3" positiveRecalibrationFlag="0" />
+  </SensorConfigurations>
+  <PinConfiguration useDefaultPinConfiguration="False">
+    <PinConfig>
+      <PortPair SNS="D" SNSK="D">
+        <Sensor Name="Button0" Type="Button" Index="0" NumberOfChannels="1">
+          <Port SNSPortPin="PD2" SNSKPortPin="PD3" />
+        </Sensor>
+        <Sensor Name="Button1" Type="Button" Index="1" NumberOfChannels="1">
+          <Port SNSPortPin="PD4" SNSKPortPin="PD5" />
+        </Sensor>
+        <Sensor Name="Button2" Type="Button" Index="2" NumberOfChannels="1">
+          <Port SNSPortPin="PD6" SNSKPortPin="PD7" />
+        </Sensor>
+      </PortPair>
+    </PinConfig>
+  </PinConfiguration>
+</Kit>

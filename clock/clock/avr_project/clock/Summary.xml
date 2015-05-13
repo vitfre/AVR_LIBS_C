@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+                                             <?xml-stylesheet type='text/xsl' href='Summary.xslt'?><SUMMARY>
+  <DeviceInformation>
+    <DeviceName>ATmega324PA</DeviceName>
+    <DeviceVariant>40/44</DeviceVariant>
+    <Technology>QTouch</Technology>
+  </DeviceInformation>
+  <SensorInformation TotalSensors="3">
+    <NumberOfButtons>3</NumberOfButtons>
+    <NumberOfWheels>0</NumberOfWheels>
+    <NumberOfSliders>0</NumberOfSliders>
+  </SensorInformation>
+  <ChannelInformation>
+    <TotalChannelsConsumed>3</TotalChannelsConsumed>
+  </ChannelInformation>
+  <PinConfiguration>
+    <AvailablePorts>A,B,C,D</AvailablePorts>
+    <TotalPinsUsed>6</TotalPinsUsed>
+    <Sensors>
+      <Sensor Name="Button0" ChannelNumber="0" SNS="PD2" SNSK="PD3" />
+      <Sensor Name="Button1" ChannelNumber="1" SNS="PD4" SNSK="PD5" />
+      <Sensor Name="Button2" ChannelNumber="2" SNS="PD6" SNSK="PD7" />
+    </Sensors>
+  </PinConfiguration>
+  <LibraryInformation ToolChainName="GCC">
+    <DefaultLibrary>libavr5g1-4qt-k-0rs.a</DefaultLibrary>
+  </LibraryInformation>
+  <MemoryInformation>
+    <DataMemory>
+      <TotalDataMemory>2048</TotalDataMemory>
+      <DataMemoryUsed>80</DataMemoryUsed>
+      <DataMemoryFree>1968</DataMemoryFree>
+    </DataMemory>
+    <CodeMemory>
+      <TotalCodeMemory>32768</TotalCodeMemory>
+      <CodeMemoryUsed>2750</CodeMemoryUsed>
+      <CodeMemoryFree>30018</CodeMemoryFree>
+    </CodeMemory>
+  </MemoryInformation>
+  <OtherOptions>
+    <DelayCycle>1</DelayCycle>
+    <PowerOptimization>Disable</PowerOptimization>
+  </OtherOptions>
+  <ComponentID>qtlib.generic.tmx.qt.avr5g1</ComponentID>
+</SUMMARY>

@@ -1,0 +1,46 @@
+void keyboard(void) {
+/*Опитування двох кнопок + і -
+(Для перевірки функції grd_PWM конвертор градуси PWM)
+(в осн прогр не викристовується)*/
+
+// Input/Output Ports initialization
+// Port B initialization
+// Func5=In Func4=In Func3=In Func2=In Func1=Out Func0=In
+// State5=T State4=P State3=T State2=P State1=0 State0=T
+PORTB=0x14;
+DDRB=0x02;
+
+if (PINB.4==0) { grd=grd+1;  //якщо кнопка нажата то +1
+delay_ms(2); //Затримка
+if (grd>116) {grd=116;};};
+if (PINB.2==0) {grd=grd-1;   //якщо кнопка нажата то -1
+delay_ms(2);  //Затримка
+if (grd<1) {grd=0;};}
+
+// Input/Output Ports initialization
+// Port B initialization
+// Func5=In Func4=In Func3=In Func2=In Func1=Out Func0=In
+// State5=T State4=T State3=T State2=T State1=0 State0=T
+PORTB=0x00;
+DDRB=0x02;
+}
+
+
+
+
+
+//Опитування кнопок + і - і s
+if (pls==0) { PWM=PWM+1;  //якщо кнопка нажата то +1
+delay_ms(1); //Затримка
+fl=1;}
+
+if (mns==0) {PWM=PWM-1;   //якщо кнопка нажата то -1
+delay_ms(1);  //Затримка
+fl=1;}
+
+if (PWM>254) {PWM=254;}
+if (PWM<1) {PWM=0;}
+
+if (fl==1) {fl=0;
+PWM_eeprom=PWM;
+}

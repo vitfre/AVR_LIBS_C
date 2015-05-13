@@ -1,0 +1,354 @@
+.wysibb .ve-tlb-bold {
+	background:url(./img/icons-1.png) 3px 1px no-repeat;
+	width:20px;
+}
+.wysibb .ve-tlb-italic {
+	background:url(./img/icons-1.png) 3px -39px no-repeat;
+	width:20px;
+}
+.wysibb .ve-tlb-underline {
+	background:url(./img/icons-1.png) 2px -19px no-repeat;
+	width:20px;
+}
+.wysibb .ve-tlb-strike {
+	background:url(./img/icons-1.png) 3px -119px no-repeat;
+	width:20px;
+}
+.wysibb .ve-tlb-link {
+	background:url(./img/icons-1.png) 3px -79px no-repeat;
+	width:20px;
+}
+.wysibb .ve-tlb-unlink {
+	background:url(./img/icons-1.png) 3px -99px no-repeat;
+	width:20px;
+}
+.wysibb .ve-tlb-img {
+	background:url(./img/icons-1.png) 3px -59px no-repeat;
+	width:20px;
+}
+.wysibb .ve-tlb-quote {
+	background:url(./img/icons-1.png) 3px -138px no-repeat;
+	width:20px;
+}
+.wysibb .ve-tlb-spoiler {
+	background:url(./img/icons-1.png) 3px -159px no-repeat;
+	width:20px;
+}
+.wysibb .ve-tlb-list {
+	background:url(./img/icons-1.png) 3px -178px no-repeat;
+	width:20px;
+}
+.wysibb .ve-tlb-bbcode {
+	background:url(./img/icons-1.png) 3px -201px no-repeat;
+	height:20px;
+	margin:2px 7px !important;
+}
+.wysibb .wysibb-toolbar .modeSwitch .wysibb-toolbar-btn{
+	width:46px;
+}
+.wysibb .ve-tlb-numlist {
+	background:url(./img/icons-1.png) 3px -220px no-repeat;
+	width:20px;
+}
+.wysibb .ve-tlb-textleft {
+	background:url(./img/icons-1.png) 3px -239px no-repeat;
+	width:20px;
+}
+.wysibb .ve-tlb-textcenter {
+	background:url(./img/icons-1.png) 3px -259px no-repeat;
+	width:20px;
+}
+.wysibb .ve-tlb-textright {
+	background:url(./img/icons-1.png) 3px -278px no-repeat;
+	width:20px;
+}
+.wysibb .ve-tlb-offtopic {
+	background:url(./img/icons-1.png) 3px -300px no-repeat;
+	width:20px;
+}
+.wysibb .ve-tlb-code {
+	background:url(./img/icons-1.png) 3px -319px no-repeat;
+	width:20px;
+}
+.wysibb .ve-tlb-spoiler {
+	background:url(./img/icons-1.png) 3px -339px no-repeat;
+	width:20px;
+}
+.wysibb .ve-tlb-sub {
+	background:url(./img/icons-1.png) 3px -359px no-repeat;
+	width:20px;
+}
+.wysibb .ve-tlb-sup {
+	background:url(./img/icons-1.png) 3px -379px no-repeat;
+	width:20px;
+}
+.wysibb .ve-tlb-colorpick {
+	background: url(./img/icons-1.png) 7px -439px;
+	width:24px;
+	height:20px;
+}
+.wysibb .ve-tlb-table {
+	background: url(./img/icons-1.png) 3px -460px;
+	width:20px;
+}
+.wysibb .ve-tlb-smilebox {
+	background: url(./img/icons-1.png) 3px -479px;
+	width:20px;
+}
+.wysibb .ve-tlb-video {
+	background: url(./img/icons-1.png) 3px -499px;
+	width:20px;
+}
+.wysibb .ve-tlb-hide {
+	background: url(./img/icons-1.png) 3px -539px;
+	width:20px;
+	height:20px;
+}
+.wysibb .ve-tlb-size {
+	display:block;
+	background:url(./img/icons-1.png) 3px -522px;
+	width:50px !important;
+	height:20px;
+}
+.wysibb .ve-tlb-hr {
+	background: url(./img/icons-1.png) 3px -574px;
+	width:20px;
+	height:20px;
+}
+.wysibb .ve-tlb-textjustify {
+	background: url(./img/icons-1.png) 3px -557px;
+	width:20px;
+}
+.wysibb .wysibb-toolbar .wysibb-toolbar-container .wysibb-toolbar-btn.wbb-dropdown ins.ar {
+	display:block;
+	position:absolute;
+	right:3px;
+	top:3px;
+	width:8px;
+	height:24px;
+	background: url(./img/icons-1.png) -8px -400px;
+	cursor:default;
+}
+.wysibb .wbb-br {
+	display:none !important;
+}
+.wysibb .wbb-select .sar {
+	display:block;
+	position:absolute;
+	right:3px;
+	top:2px;
+	width:8px;
+	height:22px;
+	background: url(./img/icons-1.png) -8px -420px;
+	cursor:default;
+}
+.wysibb .wysibb-toolbar .wysibb-toolbar-container {
+	background-image: linear-gradient(top, #f8f8f8 17%, #dfdfdf 59%);
+	background-image: -o-linear-gradient(top, #f8f8f8 17%, #dfdfdf 59%);
+	background-image: -moz-linear-gradient(top, #f8f8f8 17%, #dfdfdf 59%);
+	background-image: -webkit-linear-gradient(top, #f8f8f8 17%, #dfdfdf 59%);
+	background-image: -ms-linear-gradient(top, #f8f8f8 17%, #dfdfdf 59%);
+	background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0.17, #f8f8f8),color-stop(0.59, #dfdfdf));
+	margin:4px 4px 4px 0;
+	border: 1px solid #acacac;
+	border-radius:5px;
+	display:inline-block;
+	*display:inline;
+	zoom: 1;
+}
+
+.wysibb .wysibb-toolbar .wysibb-toolbar-container .wysibb-toolbar-btn:hover {
+	background-color: #d1dde1;
+	background-image: linear-gradient(top, #f4f4f4 17%, #c8dae1 59%);
+	background-image: -o-linear-gradient(top, #f4f4f4 17%, #c8dae1 59%);
+	background-image: -moz-linear-gradient(top, #f4f4f4 17%, #c8dae1 59%);
+	background-image: -webkit-linear-gradient(top, #f4f4f4 17%, #c8dae1 59%);
+	background-image: -ms-linear-gradient(top, #f4f4f4 17%, #c8dae1 59%);
+	background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0.17, #f4f4f4),color-stop(0.59, #c8dae1));
+}
+.wysibb .wysibb-toolbar .wysibb-toolbar-container .wysibb-toolbar-btn:first-child {
+	border-top-left-radius: 3px;
+	border-bottom-left-radius: 3px;
+}
+.wysibb .wysibb-toolbar .wysibb-toolbar-container .wysibb-toolbar-btn:last-child, .wysibb .wysibb-toolbar .wysibb-toolbar-container .wbb-hide {
+	border-top-right-radius: 3px;
+	border-bottom-right-radius: 3px;
+}
+.wysibb .wysibb-toolbar .wysibb-toolbar-container .wysibb-toolbar-btn span.btn-inner {
+	display:block;
+	border-left:1px solid #f6f6f6;
+	border-right:1px solid #b0b0b0;
+	width:26px;
+	height:21px;
+}
+.wysibb-toolbar-container .wysibb-toolbar-btn:first-child .btn-inner {
+	border-left:0px !important;
+}
+.wysibb-toolbar-container .wysibb-toolbar-btn:last-child .btn-inner, .wysibb .wysibb-toolbar .wysibb-toolbar-container .wbb-hide .btn-inner {
+	border-right:0px !important;
+}
+.wysibb .wysibb-toolbar .wysibb-toolbar-container .wysibb-toolbar-btn {
+	display:inline-block;
+	*display:inline;
+	zoom: 1;
+	height:22px;
+	min-width:24px;
+	position:relative;
+	vertical-align: middle;
+	cursor:pointer;
+}
+
+/* mxCherry - IE fix START */
+.wysibb-toolbar-btn-hovered {
+	background-color: #d1dde1;
+}
+.wysibb-toolbar-btn-hovered span.btn-tooltip {
+	display: block !important;
+}
+.wysibb-toolbar-btn-hovered span.btn-tooltip ins {
+	bottom: -14px !important;
+}
+.wysibb-toolbar-container-ie {
+	border-right: none !important;
+}
+.ve-tlb-bbcode {
+	border: none !important;
+}
+.ve-tlb-colorpick .cp-line {
+	overflow: hidden;
+}
+/* mxCherry - IE fix END */
+
+.wysibb .wysibb-toolbar .wysibb-toolbar-container .wysibb-toolbar-btn.wbb-select {
+	width:100px;
+	padding: 0 10px 0 0;
+}
+.wbb-dropdown .ar {
+	display:none !important;
+}
+
+.wysibb .wysibb-toolbar .wysibb-toolbar-container .wysibb-toolbar-btn.on,.wysibb .wysibb-toolbar .wysibb-toolbar-container .wysibb-toolbar-btn.on:hover {
+	cursor:default;
+	background:#d6d6d6;
+	background-image: linear-gradient(top, #cccccc 17%, #f4f4f4 59%);
+	background-image: -o-linear-gradient(top, #cccccc 17%, #f4f4f4 59%);
+	background-image: -moz-linear-gradient(top, #cccccc 17%, #f4f4f4 59%);
+	background-image: -webkit-linear-gradient(top, #cccccc 17%, #f4f4f4 59%);
+	background-image: -ms-linear-gradient(top, #cccccc 17%, #f4f4f4 59%);
+	background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0.17, #cccccc),color-stop(0.59, #f4f4f4));
+	border-left:0 !important;
+}
+.wysibb .wysibb-toolbar .wysibb-toolbar-container .wysibb-toolbar-btn.on .btn-inner {
+	border-left:1px solid #ccc;
+}
+
+.wbb-ufontfamily {
+	width:63px !important;
+}
+
+.wbb-fontsize .val {
+	width:25px;
+}
+
+.wbb-ufontfamily .val {
+	width:50px;
+	font-family:Georgia;
+	color:#555555;
+	font-size:10px !important;
+	padding-left:4px !important;
+}
+
+.wbb-select .val {
+	height:22px;
+	line-height:24px;
+	font-weight:bold;
+	font-size:11px;
+	display:block;
+	overflow:hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	margin-right:10px;
+	background-image: linear-gradient(top, #ffffff 17%, #f6f6f6 59%);
+	background-image: -o-linear-gradient(top, #ffffff 17%, #f6f6f6 59%);
+	background-image: -moz-linear-gradient(top, #ffffff 17%, #f6f6f6 59%);
+	background-image: -webkit-linear-gradient(top, #ffffff 17%, #f6f6f6 59%);
+	background-image: -ms-linear-gradient(top, #ffffff 17%, #f6f6f6 59%);
+	background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0.17, #ffffff),color-stop(0.59, #f6f6f6));
+	padding:0 2px;
+}
+.wysibb {
+	border:1px solid #ddd;
+	border-radius:7px;
+	position:relative;
+	background:#fff;
+	font-family:Arial,Verdana,Tahoma;
+}
+
+.wysibb .wysibb-toolbar {
+	background:#f4f4f4;
+	background-image: linear-gradient(bottom, #eee 50%, #fafafa 100%);
+	background-image: -o-linear-gradient(bottom, #eee 50%, #fafafa 100%);
+	background-image: -moz-linear-gradient(bottom, #eee 50%, #fafafa 100%);
+	background-image: -webkit-linear-gradient(bottom, #eee 50%, #fafafa 100%);
+	background-image: -ms-linear-gradient(bottom, #eee 50%, #fafafa 100%);
+	border-top-left-radius:7px;
+	border-top-right-radius:7px;
+	border-bottom:1px solid #ddd;
+	position:relative;
+	padding:4px 60px 4px 9px;
+}
+.wysibb .wysibb-toolbar .modeSwitch{
+	position:absolute;
+	right:4px;
+	top:4px;
+}
+.wysibb .wysibb-toolbar .wysibb-toolbar-container .wysibb-toolbar-btn span.btn-tooltip {
+	display:none !important;
+	background: #eeeef5;
+	background-image: linear-gradient(top, #ffffff 17%, #eeeef5 59%);
+	background-image: -o-linear-gradient(top, #ffffff 17%, #eeeef5 59%);
+	background-image: -moz-linear-gradient(top, #ffffff 17%, #eeeef5 59%);
+	background-image: -webkit-linear-gradient(top, #ffffff 17%, #eeeef5 59%);
+	background-image: -ms-linear-gradient(top, #ffffff 17%, #eeeef5 59%);
+	background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0.17, #ffffff),color-stop(0.59, #eeeef5));
+	border:1px solid #c2c2cc;
+	position:absolute;
+	line-height:20px;
+	font-size:11px;
+	padding:3px 10px;
+	bottom:35px;
+	left:-3px;
+	color:#636363;
+	border-radius:3px;
+	white-space:nowrap;
+}
+.wysibb .wysibb-toolbar .wysibb-toolbar-container .wysibb-toolbar-btn span.btn-tooltip ins{
+	background:url(./img/icons-1.png) 3px -597px no-repeat;
+	width:24px;
+	height:10px;
+	position:absolute;
+	bottom:-10px;
+	left:2px;
+}
+.wysibb .wbb-list .option {
+	color: #333;
+}
+.wysibb-body {
+	background: white;
+	color: black;
+}
+.wysibb-text textarea {
+	background: white;
+	color: black;
+}
+.wysibb-text iframe,
+.wysibb-text textarea {
+	border-bottom-left-radius: 7px;
+	border-bottom-right-radius: 7px;
+}
+.wysibb-text textarea {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	margin: 0;
+}

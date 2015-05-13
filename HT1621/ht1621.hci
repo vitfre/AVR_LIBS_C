@@ -1,0 +1,11 @@
+VERSION:3 SOURCE_TIMESTAMP:42966F02
+NODE:I LEVEL:0 LINE:3 "C:\cvavr2\inc\delay.h"
+NODE:M LEVEL:0 LINE:4 "uchar"
+NODE:M LEVEL:0 LINE:5 "CS"
+NODE:M LEVEL:0 LINE:6 "WR"
+NODE:M LEVEL:0 LINE:7 "DAT"
+NODE:M LEVEL:0 LINE:8 "nop"
+NODE:F LEVEL:0 LINE:13 "data(unsigned char b)"
+NODE:F LEVEL:0 LINE:18 "cs(unsigned char b)"
+NODE:F LEVEL:0 LINE:26 "out_cmd(unsigned char cmd)"
+NODE:F LEVEL:0 LINE:50 "out_data(unsigned char temp1,unsigned char temp2,unsigned char temp3,unsigned char addr)"
