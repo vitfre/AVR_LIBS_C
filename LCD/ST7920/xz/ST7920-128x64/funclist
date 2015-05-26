@@ -1,0 +1,11 @@
+_lcd_comm: CODE, 25688 0 56
+_lcd_image: CODE, 26490 0 414
+_lcd_puts: CODE, 28148 0 822
+_lcd_wr_ni_byte: CODE, 25902 0 204
+_lcd_data: CODE, 25632 0 56
+_lcd_putc_big: CODE, 28970 0 888
+_main: CODE, 26904 0 506
+_lcd_clear: CODE, 25744 0 158
+_lcd_wr_byte: CODE, 26106 0 384
+_lcd_init: CODE, 27410 0 738
+Total: 4226
