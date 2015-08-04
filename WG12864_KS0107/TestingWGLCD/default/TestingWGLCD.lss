@@ -1,0 +1,722 @@
+
+TestingWGLCD.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         0000079e  00000000  00000000  00000074  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         0000001c  00800060  0000079e  00000812  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .debug_aranges 00000040  00000000  00000000  0000082e  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  3 .debug_pubnames 000000a7  00000000  00000000  0000086e  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  4 .debug_info   00000476  00000000  00000000  00000915  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  5 .debug_abbrev 000001a1  00000000  00000000  00000d8b  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_line   0000045b  00000000  00000000  00000f2c  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_frame  000000b0  00000000  00000000  00001388  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_str    00000178  00000000  00000000  00001438  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_loc    000002b7  00000000  00000000  000015b0  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	0c 94 ba 01 	jmp	0x374	; 0x374 <__ctors_end>
+   4:	0c 94 cf 01 	jmp	0x39e	; 0x39e <__bad_interrupt>
+   8:	0c 94 cf 01 	jmp	0x39e	; 0x39e <__bad_interrupt>
+   c:	0c 94 cf 01 	jmp	0x39e	; 0x39e <__bad_interrupt>
+  10:	0c 94 cf 01 	jmp	0x39e	; 0x39e <__bad_interrupt>
+  14:	0c 94 cf 01 	jmp	0x39e	; 0x39e <__bad_interrupt>
+  18:	0c 94 cf 01 	jmp	0x39e	; 0x39e <__bad_interrupt>
+  1c:	0c 94 cf 01 	jmp	0x39e	; 0x39e <__bad_interrupt>
+  20:	0c 94 cf 01 	jmp	0x39e	; 0x39e <__bad_interrupt>
+  24:	0c 94 cf 01 	jmp	0x39e	; 0x39e <__bad_interrupt>
+  28:	0c 94 cf 01 	jmp	0x39e	; 0x39e <__bad_interrupt>
+  2c:	0c 94 cf 01 	jmp	0x39e	; 0x39e <__bad_interrupt>
+  30:	0c 94 cf 01 	jmp	0x39e	; 0x39e <__bad_interrupt>
+  34:	0c 94 cf 01 	jmp	0x39e	; 0x39e <__bad_interrupt>
+  38:	0c 94 cf 01 	jmp	0x39e	; 0x39e <__bad_interrupt>
+  3c:	0c 94 cf 01 	jmp	0x39e	; 0x39e <__bad_interrupt>
+  40:	0c 94 cf 01 	jmp	0x39e	; 0x39e <__bad_interrupt>
+  44:	0c 94 cf 01 	jmp	0x39e	; 0x39e <__bad_interrupt>
+  48:	0c 94 cf 01 	jmp	0x39e	; 0x39e <__bad_interrupt>
+  4c:	0c 94 cf 01 	jmp	0x39e	; 0x39e <__bad_interrupt>
+  50:	0c 94 cf 01 	jmp	0x39e	; 0x39e <__bad_interrupt>
+
+00000054 <symboltable>:
+  54:	00 00 00 00 00 00 00 4f 00 00 00 07 00 07 00 14     .......O........
+  64:	7f 14 7f 14 24 2a 7f 2a 12 23 13 08 64 62 36 49     ....$*.*.#..db6I
+  74:	55 22 40 00 05 03 00 00 00 1c 22 41 00 00 41 22     U"@......."A..A"
+  84:	1c 00 14 08 3e 08 14 08 08 3e 08 08 00 50 30 00     ....>....>...P0.
+  94:	00 08 08 08 08 08 00 60 60 00 00 20 10 08 04 02     .......``.. ....
+  a4:	3e 51 49 45 3e 00 42 7f 40 00 42 61 51 49 46 21     >QIE>.B.@.BaQIF!
+  b4:	41 45 4b 31 18 14 12 7f 10 27 45 45 45 39 3c 4a     AEK1.....'EEE9<J
+  c4:	49 49 30 01 71 09 05 03 36 49 49 49 36 06 49 49     II0.q...6III6.II
+  d4:	29 1e 00 36 36 00 00 00 56 36 00 00 08 14 22 41     )..66...V6...."A
+  e4:	00 14 14 14 14 14 00 41 22 14 08 02 01 51 09 06     .......A"....Q..
+  f4:	32 49 71 41 3e 7e 11 11 11 7e 7f 49 49 49 36 3e     2IqA>~...~.III6>
+ 104:	41 41 41 22 7f 41 41 22 1c 7f 49 49 49 41 7f 09     AAA".AA"..IIIA..
+ 114:	09 09 01 3e 41 49 49 3a 7f 08 08 08 7f 00 41 7f     ...>AII:......A.
+ 124:	41 00 20 40 41 3f 01 7f 08 14 22 41 7f 40 40 40     A. @A?...."A.@@@
+ 134:	40 7f 02 0c 02 7f 7f 04 08 10 7f 3e 41 41 41 3e     @..........>AAA>
+ 144:	7f 09 09 09 06 3e 41 51 21 5e 7f 09 19 29 46 46     .....>AQ!^...)FF
+ 154:	49 49 49 31 01 01 7f 01 01 3f 40 40 40 3f 1f 20     III1.....?@@@?. 
+ 164:	40 20 1f 3f 40 30 40 3f 63 14 08 14 63 07 08 70     @ .?@0@?c...c..p
+ 174:	08 07 61 51 49 45 43 00 7f 41 41 00 02 04 08 10     ..aQIEC..AA.....
+ 184:	20 00 41 41 7f 00 04 02 01 02 04 40 40 40 40 40      .AA.......@@@@@
+ 194:	00 01 02 04 00 20 54 54 54 78 7f 48 44 44 38 38     ..... TTTx.HDD88
+ 1a4:	44 44 44 20 38 44 44 48 7f 38 54 54 54 18 08 7e     DDD 8DDH.8TTT..~
+ 1b4:	09 01 02 0c 52 52 52 3e 7f 08 04 04 78 00 44 7d     ....RRR>....x.D}
+ 1c4:	40 00 20 40 44 3d 00 7f 10 28 44 00 00 41 7f 40     @. @D=...(D..A.@
+ 1d4:	00 7c 04 18 04 78 7c 08 04 04 78 38 44 44 44 38     .|...x|...x8DDD8
+ 1e4:	7c 14 14 14 08 08 14 14 18 7c 7c 08 04 04 08 48     |........||....H
+ 1f4:	54 54 54 20 04 3f 44 40 20 3c 40 40 20 7c 1c 20     TTT .?D@ <@@ |. 
+ 204:	40 20 1c 3c 40 30 40 3c 44 28 10 28 44 0c 50 50     @ .<@0@<D(.(D.PP
+ 214:	50 3c 44 64 54 4c 44 00 08 36 41 00 00 00 7f 00     P<DdTLD..6A.....
+ 224:	00 00 41 36 08 00 02 01 02 02 01 00 00 00 00 00     ..A6............
+ 234:	7e 11 11 11 7e 7f 49 49 49 33 7f 49 49 49 36 7f     ~...~.III3.III6.
+ 244:	01 01 01 03 e0 51 4f 41 ff 7f 49 49 49 41 77 08     .....QOA..IIIAw.
+ 254:	7f 08 77 41 49 49 49 36 7f 10 08 04 7f 7c 21 12     ..wAIII6.....|!.
+ 264:	09 7c 7f 08 14 22 41 20 41 3f 01 7f 7f 02 0c 02     .|..."A A?......
+ 274:	7f 7f 08 08 08 7f 3e 41 41 41 3e 7f 01 01 01 7f     ......>AAA>.....
+ 284:	7f 09 09 09 06 3e 41 41 41 22 01 01 7f 01 01 47     .....>AAA".....G
+ 294:	28 10 08 07 1c 22 7f 22 1c 63 14 08 14 63 7f 40     (....".".c...c.@
+ 2a4:	40 40 ff 07 08 08 08 7f 7f 40 7f 40 7f 7f 40 7f     @@.......@.@..@.
+ 2b4:	40 ff 01 7f 48 48 30 7f 48 30 00 7f 00 7f 48 48     @...HH0.H0....HH
+ 2c4:	30 22 41 49 49 3e 7f 08 3e 41 3e 46 29 19 09 7f     0"AII>..>A>F)...
+ 2d4:	20 54 54 54 78 3c 4a 4a 49 31 7c 54 54 28 00 7c      TTTx<JJI1|TT(.|
+ 2e4:	04 04 04 0c e0 54 4c 44 fc 38 54 54 54 18 6c 10     .....TLD.8TTT.l.
+ 2f4:	7c 10 6c 44 44 54 54 28 7c 20 10 08 7c 7c 41 22     |.lDDTT(| ..||A"
+ 304:	11 7c 7c 10 28 44 00 20 44 3c 04 7c 7c 08 10 08     .||.(D. D<.||...
+ 314:	7c 7c 10 10 10 7c 38 44 44 44 38 7c 04 04 04 7c     ||...|8DDD8|...|
+ 324:	7c 14 14 14 08 38 44 44 44 20 04 04 7c 04 04 0c     |....8DDD ..|...
+ 334:	50 50 50 3c 30 48 fc 48 30 44 28 10 28 44 7c 40     PPP<0H.H0D(.(D|@
+ 344:	40 40 fc 0c 10 10 10 7c 7c 40 7c 40 7c 7c 40 7c     @@.....||@|@||@|
+ 354:	40 fc 04 7c 50 50 20 7c 50 50 20 7c 7c 50 50 20     @..|PP |PP ||PP 
+ 364:	00 28 44 54 54 38 7c 10 38 44 38 08 54 34 14 7c     .(DTT8|.8D8.T4.|
+
+00000374 <__ctors_end>:
+ 374:	11 24       	eor	r1, r1
+ 376:	1f be       	out	0x3f, r1	; 63
+ 378:	cf e5       	ldi	r28, 0x5F	; 95
+ 37a:	d4 e0       	ldi	r29, 0x04	; 4
+ 37c:	de bf       	out	0x3e, r29	; 62
+ 37e:	cd bf       	out	0x3d, r28	; 61
+
+00000380 <__do_copy_data>:
+ 380:	10 e0       	ldi	r17, 0x00	; 0
+ 382:	a0 e6       	ldi	r26, 0x60	; 96
+ 384:	b0 e0       	ldi	r27, 0x00	; 0
+ 386:	ee e9       	ldi	r30, 0x9E	; 158
+ 388:	f7 e0       	ldi	r31, 0x07	; 7
+ 38a:	02 c0       	rjmp	.+4      	; 0x390 <.do_copy_data_start>
+
+0000038c <.do_copy_data_loop>:
+ 38c:	05 90       	lpm	r0, Z+
+ 38e:	0d 92       	st	X+, r0
+
+00000390 <.do_copy_data_start>:
+ 390:	ac 37       	cpi	r26, 0x7C	; 124
+ 392:	b1 07       	cpc	r27, r17
+ 394:	d9 f7       	brne	.-10     	; 0x38c <.do_copy_data_loop>
+ 396:	0e 94 d1 01 	call	0x3a2	; 0x3a2 <main>
+ 39a:	0c 94 cd 03 	jmp	0x79a	; 0x79a <_exit>
+
+0000039e <__bad_interrupt>:
+ 39e:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+
+000003a2 <main>:
+
+#include <LCD_wg128.h>
+
+int main()
+{
+LCD_INIT();
+ 3a2:	0e 94 a4 03 	call	0x748	; 0x748 <LCD_INIT>
+
+DEBUG_UP;
+ 3a6:	c6 9a       	sbi	0x18, 6	; 24
+LCD_putc(2,20,"Di Halt");
+ 3a8:	82 e0       	ldi	r24, 0x02	; 2
+ 3aa:	64 e1       	ldi	r22, 0x14	; 20
+ 3ac:	40 e6       	ldi	r20, 0x60	; 96
+ 3ae:	50 e0       	ldi	r21, 0x00	; 0
+ 3b0:	0e 94 81 03 	call	0x702	; 0x702 <LCD_putc>
+LCD_putc(0,1,"EasyElectronics.ru");
+ 3b4:	80 e0       	ldi	r24, 0x00	; 0
+ 3b6:	61 e0       	ldi	r22, 0x01	; 1
+ 3b8:	48 e6       	ldi	r20, 0x68	; 104
+ 3ba:	50 e0       	ldi	r21, 0x00	; 0
+ 3bc:	0e 94 81 03 	call	0x702	; 0x702 <LCD_putc>
+DEBUG_DN;
+ 3c0:	c6 98       	cbi	0x18, 6	; 24
+
+return 0;
+}
+ 3c2:	80 e0       	ldi	r24, 0x00	; 0
+ 3c4:	90 e0       	ldi	r25, 0x00	; 0
+ 3c6:	08 95       	ret
+
+000003c8 <LCD_WR_COM>:
+
+
+// Пишем команду в выбранный контроллер
+void LCD_WR_COM(u08 cmd,u08 CSC)
+{					// Поднятие сигналов:
+LCD_SET_CMD;		// Команда
+ 3c8:	c0 98       	cbi	0x18, 0	; 24
+LCD_SET_W;			// Запись
+ 3ca:	9f ef       	ldi	r25, 0xFF	; 255
+ 3cc:	9a bb       	out	0x1a, r25	; 26
+ 3ce:	1b ba       	out	0x1b, r1	; 27
+ 3d0:	c1 98       	cbi	0x18, 1	; 24
+
+ON_CS(CSC);			// Выбор чипа
+ 3d2:	98 b3       	in	r25, 0x18	; 24
+ 3d4:	96 2b       	or	r25, r22
+ 3d6:	98 bb       	out	0x18, r25	; 24
+
+
+LCD_DATA_INS(cmd);	// Команду на шину данных
+ 3d8:	8b bb       	out	0x1b, r24	; 27
+	...
+
+NOPS;				// Подождем
+ 40a:	00 00       	nop
+LCD_PUL_E;			// Дрыгнем стробом
+ 40c:	c2 9a       	sbi	0x18, 2	; 24
+	...
+ 41a:	00 00       	nop
+ 41c:	c2 98       	cbi	0x18, 2	; 24
+	...
+NOPS;				// Подождем
+ 44e:	00 00       	nop
+
+LCD_OFF_CS1;		// Выключим 
+ 450:	c3 98       	cbi	0x18, 3	; 24
+LCD_OFF_CS2;		// выбор кристалла
+ 452:	c4 98       	cbi	0x18, 4	; 24
+}
+ 454:	08 95       	ret
+
+00000456 <LCD_WR_DATA>:
+
+// Пишем данные в контроллер
+void LCD_WR_DATA(u08 cmd, u08 CSC)
+{					// Поднятие сигналов
+LCD_SET_DAT;		// Данные
+ 456:	c0 9a       	sbi	0x18, 0	; 24
+LCD_SET_W;			// Запись
+ 458:	9f ef       	ldi	r25, 0xFF	; 255
+ 45a:	9a bb       	out	0x1a, r25	; 26
+ 45c:	1b ba       	out	0x1b, r1	; 27
+ 45e:	c1 98       	cbi	0x18, 1	; 24
+
+ON_CS(CSC);			// Выбор чипа
+ 460:	98 b3       	in	r25, 0x18	; 24
+ 462:	96 2b       	or	r25, r22
+ 464:	98 bb       	out	0x18, r25	; 24
+
+LCD_DATA_INS(cmd);	// Данные на шину данных
+ 466:	8b bb       	out	0x1b, r24	; 27
+	...
+
+NOPS;				// Подождем 
+ 498:	00 00       	nop
+LCD_PUL_E;			// Дрыгнем стробом
+ 49a:	c2 9a       	sbi	0x18, 2	; 24
+	...
+ 4a8:	00 00       	nop
+ 4aa:	c2 98       	cbi	0x18, 2	; 24
+	...
+NOPS;				// Подождем
+ 4dc:	00 00       	nop
+
+
+LCD_OFF_CS1;		// Выключим выбор
+ 4de:	c3 98       	cbi	0x18, 3	; 24
+LCD_OFF_CS2;		// Чипа.
+ 4e0:	c4 98       	cbi	0x18, 4	; 24
+}
+ 4e2:	08 95       	ret
+
+000004e4 <LCD_FILL>:
+
+
+// Заливка экрана 
+void LCD_FILL(u08 byte)
+{
+ 4e4:	ff 92       	push	r15
+ 4e6:	0f 93       	push	r16
+ 4e8:	1f 93       	push	r17
+ 4ea:	f8 2e       	mov	r15, r24
+ 4ec:	08 eb       	ldi	r16, 0xB8	; 184
+	for(u08 i=0; i<8; i++)					//Перебирая страницы X от 0 до 7
+	{
+		LCD_WR_COM(0xB8+i,(1<<CS1|1<<CS2));	//Льем параллельно в оба чипа. 0xB8 задает тип операции (адрес страницы)
+ 4ee:	80 2f       	mov	r24, r16
+ 4f0:	68 e1       	ldi	r22, 0x18	; 24
+ 4f2:	0e 94 e4 01 	call	0x3c8	; 0x3c8 <LCD_WR_COM>
+ 4f6:	10 e4       	ldi	r17, 0x40	; 64
+
+		for(u08 j=0; j<64; j++)				// Задаем адрес Y от 0 до 64
+			{
+			LCD_WR_COM(0x40+j,(1<<CS1|1<<CS2));		// Записываем адрес У в контроллер.
+ 4f8:	81 2f       	mov	r24, r17
+ 4fa:	68 e1       	ldi	r22, 0x18	; 24
+ 4fc:	0e 94 e4 01 	call	0x3c8	; 0x3c8 <LCD_WR_COM>
+			LCD_WR_DATA(byte,(1<<CS1|1<<CS2));		// Записываем в байт с адресом ХУ  нужное значение
+ 500:	8f 2d       	mov	r24, r15
+ 502:	68 e1       	ldi	r22, 0x18	; 24
+ 504:	0e 94 2b 02 	call	0x456	; 0x456 <LCD_WR_DATA>
+ 508:	1f 5f       	subi	r17, 0xFF	; 255
+{
+	for(u08 i=0; i<8; i++)					//Перебирая страницы X от 0 до 7
+	{
+		LCD_WR_COM(0xB8+i,(1<<CS1|1<<CS2));	//Льем параллельно в оба чипа. 0xB8 задает тип операции (адрес страницы)
+
+		for(u08 j=0; j<64; j++)				// Задаем адрес Y от 0 до 64
+ 50a:	10 38       	cpi	r17, 0x80	; 128
+ 50c:	a9 f7       	brne	.-22     	; 0x4f8 <LCD_FILL+0x14>
+ 50e:	0f 5f       	subi	r16, 0xFF	; 255
+
+
+// Заливка экрана 
+void LCD_FILL(u08 byte)
+{
+	for(u08 i=0; i<8; i++)					//Перебирая страницы X от 0 до 7
+ 510:	00 3c       	cpi	r16, 0xC0	; 192
+ 512:	69 f7       	brne	.-38     	; 0x4ee <LCD_FILL+0xa>
+			{
+			LCD_WR_COM(0x40+j,(1<<CS1|1<<CS2));		// Записываем адрес У в контроллер.
+			LCD_WR_DATA(byte,(1<<CS1|1<<CS2));		// Записываем в байт с адресом ХУ  нужное значение
+			}
+	}
+}
+ 514:	1f 91       	pop	r17
+ 516:	0f 91       	pop	r16
+ 518:	ff 90       	pop	r15
+ 51a:	08 95       	ret
+
+0000051c <LCD_RD_DATA>:
+u08 LCD_RD_DATA(u08 CSC)
+{
+u08 outv;
+
+						// Выставляем линии управления
+LCD_SET_DAT;			// Данные
+ 51c:	c0 9a       	sbi	0x18, 0	; 24
+LCD_SET_R;				// Чтение
+ 51e:	1a ba       	out	0x1a, r1	; 26
+ 520:	9f ef       	ldi	r25, 0xFF	; 255
+ 522:	9b bb       	out	0x1b, r25	; 27
+ 524:	c1 9a       	sbi	0x18, 1	; 24
+
+ON_CS(CSC);				// Выбираем чип (только один!) 
+ 526:	98 b3       	in	r25, 0x18	; 24
+ 528:	98 2b       	or	r25, r24
+ 52a:	98 bb       	out	0x18, r25	; 24
+	...
+
+NOPS;					// Ждем
+ 55c:	00 00       	nop
+LCD_PUL_E;				// Дрыг стробом - пустое чтение, активация защелки
+ 55e:	c2 9a       	sbi	0x18, 2	; 24
+	...
+ 56c:	00 00       	nop
+ 56e:	c2 98       	cbi	0x18, 2	; 24
+	...
+NOPS;					// Ждем
+ 5a0:	00 00       	nop
+		
+LCD_UP_E;				// Строб вверх
+ 5a2:	c2 9a       	sbi	0x18, 2	; 24
+	...
+NOPS;					// Ждем
+ 5d4:	00 00       	nop
+outv = LCD_DATA_PIN;	// Контроллер выдал данные на шину. Читаем их 
+ 5d6:	89 b3       	in	r24, 0x19	; 25
+LCD_DN_E;				// Строб вниз
+ 5d8:	c2 98       	cbi	0x18, 2	; 24
+
+LCD_OFF_CS1;			// Все свободны!
+ 5da:	c3 98       	cbi	0x18, 3	; 24
+LCD_OFF_CS2;
+ 5dc:	c4 98       	cbi	0x18, 4	; 24
+
+return outv;			// Возвращаем считанное 
+}
+ 5de:	08 95       	ret
+
+000005e0 <PIXEL>:
+// Процедура установки пикселя. Т.к. пиксель часть байта, то надо сначала вычислить
+// Контроллер, потом страницу и нужный байт. Считать этот байт. Изменить в нем только один,
+// нужный, бит и вернуть его на место.
+// На входе координаты и режим обработки пикселя (вкл, выкл, переключение)
+void PIXEL(u08 x,u08 y,u08 mode)
+{
+ 5e0:	df 92       	push	r13
+ 5e2:	ef 92       	push	r14
+ 5e4:	ff 92       	push	r15
+ 5e6:	0f 93       	push	r16
+ 5e8:	1f 93       	push	r17
+ 5ea:	f8 2e       	mov	r15, r24
+ 5ec:	d4 2e       	mov	r13, r20
+u08 CSS, row, col, byte;
+u08 res,read;
+
+if(y>63)					// Проверяем в каком контроллере искомый пиксель
+ 5ee:	60 34       	cpi	r22, 0x40	; 64
+ 5f0:	10 f4       	brcc	.+4      	; 0x5f6 <PIXEL+0x16>
+ 5f2:	08 e0       	ldi	r16, 0x08	; 8
+ 5f4:	02 c0       	rjmp	.+4      	; 0x5fa <PIXEL+0x1a>
+	{
+	CSS = 1<<CS2;			// Если У больше 63 значит во втором. Выставляем 2й 
+	col = y-64;				// И отнимаем смещение, чтобы не мешалось. 
+ 5f6:	60 54       	subi	r22, 0x40	; 64
+ 5f8:	00 e1       	ldi	r16, 0x10	; 16
+	CSS = 1<<CS1;			// Иначе контроллер у нас первый. 
+	col = y;				// А смещения нет. 
+	}
+
+row = x>>3;					// Делим Х на 8, чтобы получить номер страницы. 
+byte = 1<<x%8;				// А остаток от деления даст нам искомый бит, который мы задвигаем
+ 5fa:	2f 2d       	mov	r18, r15
+ 5fc:	27 70       	andi	r18, 0x07	; 7
+ 5fe:	81 e0       	ldi	r24, 0x01	; 1
+ 600:	90 e0       	ldi	r25, 0x00	; 0
+ 602:	18 2f       	mov	r17, r24
+ 604:	01 c0       	rjmp	.+2      	; 0x608 <PIXEL+0x28>
+ 606:	11 0f       	add	r17, r17
+ 608:	2a 95       	dec	r18
+ 60a:	ea f7       	brpl	.-6      	; 0x606 <PIXEL+0x26>
+							// и получаем нужную нам битмаску для модификации байта. 
+
+SET_ADDR(row,col,CSS);		// выставляем адрес
+ 60c:	80 e4       	ldi	r24, 0x40	; 64
+ 60e:	e8 2e       	mov	r14, r24
+ 610:	e6 0e       	add	r14, r22
+ 612:	8e 2d       	mov	r24, r14
+ 614:	60 2f       	mov	r22, r16
+ 616:	0e 94 e4 01 	call	0x3c8	; 0x3c8 <LCD_WR_COM>
+ 61a:	f6 94       	lsr	r15
+ 61c:	f6 94       	lsr	r15
+ 61e:	f6 94       	lsr	r15
+ 620:	88 eb       	ldi	r24, 0xB8	; 184
+ 622:	f8 0e       	add	r15, r24
+ 624:	8f 2d       	mov	r24, r15
+ 626:	60 2f       	mov	r22, r16
+ 628:	0e 94 e4 01 	call	0x3c8	; 0x3c8 <LCD_WR_COM>
+read = LCD_RD_DATA(CSS);	// Читаем данные (адрес при этом ++ аппаратно). 
+ 62c:	80 2f       	mov	r24, r16
+ 62e:	0e 94 8e 02 	call	0x51c	; 0x51c <LCD_RD_DATA>
+
+switch(mode)				// В зависимости от режима
+ 632:	dd 20       	and	r13, r13
+ 634:	21 f0       	breq	.+8      	; 0x63e <PIXEL+0x5e>
+ 636:	91 e0       	ldi	r25, 0x01	; 1
+ 638:	d9 16       	cp	r13, r25
+ 63a:	31 f4       	brne	.+12     	; 0x648 <PIXEL+0x68>
+ 63c:	03 c0       	rjmp	.+6      	; 0x644 <PIXEL+0x64>
+	{
+	case 0:							// Clear
+			{
+			res = read & ~byte;		// Накладываем сбрасывающую (NOT) маску
+ 63e:	10 95       	com	r17
+ 640:	18 23       	and	r17, r24
+ 642:	03 c0       	rjmp	.+6      	; 0x64a <PIXEL+0x6a>
+			break;
+			}	
+	case 1:		// Invert
+			{
+			res = read ^ byte;		// Накладываем инвертирующую (ХОR) маску 
+ 644:	18 27       	eor	r17, r24
+ 646:	01 c0       	rjmp	.+2      	; 0x64a <PIXEL+0x6a>
+			break;
+			}
+	default:		// Set
+			{
+			res = read | byte;		// Накладываем устанавливающую (OR) маску
+ 648:	18 2b       	or	r17, r24
+			break;
+			}
+	}
+
+SET_ADDR(row,col,CSS);		// Повторно выставляем адрес. Т.к. чтение его исказило.
+ 64a:	8e 2d       	mov	r24, r14
+ 64c:	60 2f       	mov	r22, r16
+ 64e:	0e 94 e4 01 	call	0x3c8	; 0x3c8 <LCD_WR_COM>
+ 652:	8f 2d       	mov	r24, r15
+ 654:	60 2f       	mov	r22, r16
+ 656:	0e 94 e4 01 	call	0x3c8	; 0x3c8 <LCD_WR_COM>
+LCD_WR_DATA(res,CSS);		// Вгоняем туда результат нашей модификации. 
+ 65a:	81 2f       	mov	r24, r17
+ 65c:	60 2f       	mov	r22, r16
+ 65e:	0e 94 2b 02 	call	0x456	; 0x456 <LCD_WR_DATA>
+}
+ 662:	1f 91       	pop	r17
+ 664:	0f 91       	pop	r16
+ 666:	ff 90       	pop	r15
+ 668:	ef 90       	pop	r14
+ 66a:	df 90       	pop	r13
+ 66c:	08 95       	ret
+
+0000066e <BLOCK>:
+
+
+// Запись сразу блока. Удобно для вывода строк или картинок, постранично. 
+// На входе страница Х и колонка У. А также длина блока и адрес откуда брать данные.
+u08 BLOCK(u08 x,u08 y, u08 len, u16 addr)
+{
+ 66e:	bf 92       	push	r11
+ 670:	cf 92       	push	r12
+ 672:	df 92       	push	r13
+ 674:	ef 92       	push	r14
+ 676:	ff 92       	push	r15
+ 678:	0f 93       	push	r16
+ 67a:	1f 93       	push	r17
+ 67c:	cf 93       	push	r28
+ 67e:	df 93       	push	r29
+ 680:	e8 2e       	mov	r14, r24
+ 682:	f6 2e       	mov	r15, r22
+ 684:	b4 2e       	mov	r11, r20
+ 686:	69 01       	movw	r12, r18
+u08 CSS,i,col;
+
+if(y>63)					// Сначала вычисляем нужные нам сегмент (чип)
+ 688:	2f e3       	ldi	r18, 0x3F	; 63
+ 68a:	26 17       	cp	r18, r22
+ 68c:	18 f0       	brcs	.+6      	; 0x694 <BLOCK+0x26>
+ 68e:	06 2f       	mov	r16, r22
+ 690:	18 e0       	ldi	r17, 0x08	; 8
+ 692:	03 c0       	rjmp	.+6      	; 0x69a <BLOCK+0x2c>
+	{
+	CSS = 1<<CS2;
+	col = y-64;
+ 694:	06 2f       	mov	r16, r22
+ 696:	00 54       	subi	r16, 0x40	; 64
+ 698:	10 e1       	ldi	r17, 0x10	; 16
+	{
+	CSS = 1<<CS1;
+	col = y;
+	}
+
+SET_ADDR(x,col,CSS);					// Ставим адрес
+ 69a:	80 2f       	mov	r24, r16
+ 69c:	80 5c       	subi	r24, 0xC0	; 192
+ 69e:	61 2f       	mov	r22, r17
+ 6a0:	0e 94 e4 01 	call	0x3c8	; 0x3c8 <LCD_WR_COM>
+ 6a4:	38 eb       	ldi	r19, 0xB8	; 184
+ 6a6:	e3 0e       	add	r14, r19
+ 6a8:	8e 2d       	mov	r24, r14
+ 6aa:	61 2f       	mov	r22, r17
+ 6ac:	0e 94 e4 01 	call	0x3c8	; 0x3c8 <LCD_WR_COM>
+ 6b0:	e6 01       	movw	r28, r12
+ 6b2:	17 c0       	rjmp	.+46     	; 0x6e2 <BLOCK+0x74>
+// А дальше в цикле гоним байты. Не забывая увеличивать адрес, чтобы была выборка из
+// памяти. Счетчик, чтобы не сбиться со счета. И номер колонки, чтобы не вылезти за границы
+// И вообще понимать где мы находимся. 
+for(i=0;i!=len;i++,addr++,col++)
+	{
+	if(64==col)						// Попутно проверяем за границы выхода из сегмента
+ 6b4:	00 34       	cpi	r16, 0x40	; 64
+ 6b6:	71 f4       	brne	.+28     	; 0x6d4 <BLOCK+0x66>
+		{
+		if(CSS == (1<<CS2))			// Если случилось, и у нас второй сегмент, т.е. конец
+ 6b8:	10 31       	cpi	r17, 0x10	; 16
+ 6ba:	11 f4       	brne	.+4      	; 0x6c0 <BLOCK+0x52>
+ 6bc:	80 e8       	ldi	r24, 0x80	; 128
+ 6be:	17 c0       	rjmp	.+46     	; 0x6ee <BLOCK+0x80>
+			return 128;				// выходим с кодом ошибки (код больше разрешения экрана)
+			}
+
+		col=0;						// Иначе же обнуляем счетчик колонок. И переключаем банку
+		CSS = 1<<CS2;				// Выбрав второй сегмент экрана
+		SET_ADDR(x,col,CSS);		// И выставив новый текущий адрес
+ 6c0:	80 e4       	ldi	r24, 0x40	; 64
+ 6c2:	60 e1       	ldi	r22, 0x10	; 16
+ 6c4:	0e 94 e4 01 	call	0x3c8	; 0x3c8 <LCD_WR_COM>
+ 6c8:	8e 2d       	mov	r24, r14
+ 6ca:	60 e1       	ldi	r22, 0x10	; 16
+ 6cc:	0e 94 e4 01 	call	0x3c8	; 0x3c8 <LCD_WR_COM>
+ 6d0:	10 e1       	ldi	r17, 0x10	; 16
+ 6d2:	00 e0       	ldi	r16, 0x00	; 0
+		}
+
+	LCD_WR_DATA(pgm_read_byte(addr),CSS);	// Пишем туда данные прям из флеша (таблица символов). 
+ 6d4:	fe 01       	movw	r30, r28
+ 6d6:	84 91       	lpm	r24, Z+
+ 6d8:	61 2f       	mov	r22, r17
+ 6da:	0e 94 2b 02 	call	0x456	; 0x456 <LCD_WR_DATA>
+SET_ADDR(x,col,CSS);					// Ставим адрес
+
+// А дальше в цикле гоним байты. Не забывая увеличивать адрес, чтобы была выборка из
+// памяти. Счетчик, чтобы не сбиться со счета. И номер колонки, чтобы не вылезти за границы
+// И вообще понимать где мы находимся. 
+for(i=0;i!=len;i++,addr++,col++)
+ 6de:	21 96       	adiw	r28, 0x01	; 1
+ 6e0:	0f 5f       	subi	r16, 0xFF	; 255
+ 6e2:	9e 01       	movw	r18, r28
+ 6e4:	2c 19       	sub	r18, r12
+ 6e6:	2b 15       	cp	r18, r11
+ 6e8:	29 f7       	brne	.-54     	; 0x6b4 <BLOCK+0x46>
+		SET_ADDR(x,col,CSS);		// И выставив новый текущий адрес
+		}
+
+	LCD_WR_DATA(pgm_read_byte(addr),CSS);	// Пишем туда данные прям из флеша (таблица символов). 
+	}
+return y+len;						// Возвращаем координату увеличиную на размер блока.
+ 6ea:	8b 2d       	mov	r24, r11
+ 6ec:	8f 0d       	add	r24, r15
+}
+ 6ee:	df 91       	pop	r29
+ 6f0:	cf 91       	pop	r28
+ 6f2:	1f 91       	pop	r17
+ 6f4:	0f 91       	pop	r16
+ 6f6:	ff 90       	pop	r15
+ 6f8:	ef 90       	pop	r14
+ 6fa:	df 90       	pop	r13
+ 6fc:	cf 90       	pop	r12
+ 6fe:	bf 90       	pop	r11
+ 700:	08 95       	ret
+
+00000702 <LCD_putc>:
+
+
+// Процедура вывода строки. На входе строка, и координаты. Х в страницах, а У в точках.
+void LCD_putc(u08 x,u08 y,u08 *string)
+{
+ 702:	0f 93       	push	r16
+ 704:	1f 93       	push	r17
+ 706:	cf 93       	push	r28
+ 708:	df 93       	push	r29
+ 70a:	18 2f       	mov	r17, r24
+ 70c:	ea 01       	movw	r28, r20
+
+	sym = *string-0x20;		// Вычисляем из ASCII кода смещение в таблице символов. 
+							// Для русского языка и цифр надо условия добавить. Т.к. 
+							// таблица там не полная, не 255 байт.
+
+	y = BLOCK(x,y+1,5,(u16)symboltable+sym*5);	// Закатываем этот блок. 
+ 70e:	05 e0       	ldi	r16, 0x05	; 5
+ 710:	13 c0       	rjmp	.+38     	; 0x738 <LCD_putc+0x36>
+{
+u08 sym;
+
+while (*string!='\0')	// Пока первый байт строки не 0 (конец ASCIIZ строки)
+	{
+		if(127<y)		// Проверяем за границу выхода за экран. Если вылезаем
+ 712:	67 ff       	sbrs	r22, 7
+ 714:	04 c0       	rjmp	.+8      	; 0x71e <LCD_putc+0x1c>
+			{			// Вот тут, кстати, можно поиграть с числом, чтобы не рубило последний символ.
+			y=0;			// То обнуляем координату точки. 
+			x++;			// Выставляем следующую строку
+ 716:	1f 5f       	subi	r17, 0xFF	; 255
+			if(x>7) break;	// Если экран и вниз кончился - выход. 
+ 718:	18 30       	cpi	r17, 0x08	; 8
+ 71a:	88 f4       	brcc	.+34     	; 0x73e <LCD_putc+0x3c>
+ 71c:	60 e0       	ldi	r22, 0x00	; 0
+
+	sym = *string-0x20;		// Вычисляем из ASCII кода смещение в таблице символов. 
+							// Для русского языка и цифр надо условия добавить. Т.к. 
+							// таблица там не полная, не 255 байт.
+
+	y = BLOCK(x,y+1,5,(u16)symboltable+sym*5);	// Закатываем этот блок. 
+ 71e:	6f 5f       	subi	r22, 0xFF	; 255
+ 720:	80 52       	subi	r24, 0x20	; 32
+ 722:	80 9f       	mul	r24, r16
+ 724:	90 01       	movw	r18, r0
+ 726:	11 24       	eor	r1, r1
+ 728:	2c 5a       	subi	r18, 0xAC	; 172
+ 72a:	3f 4f       	sbci	r19, 0xFF	; 255
+ 72c:	81 2f       	mov	r24, r17
+ 72e:	45 e0       	ldi	r20, 0x05	; 5
+ 730:	0e 94 37 03 	call	0x66e	; 0x66e <BLOCK>
+ 734:	68 2f       	mov	r22, r24
+	string++;									// Не забывая увеличивать указатель,
+ 736:	21 96       	adiw	r28, 0x01	; 1
+// Процедура вывода строки. На входе строка, и координаты. Х в страницах, а У в точках.
+void LCD_putc(u08 x,u08 y,u08 *string)
+{
+u08 sym;
+
+while (*string!='\0')	// Пока первый байт строки не 0 (конец ASCIIZ строки)
+ 738:	88 81       	ld	r24, Y
+ 73a:	88 23       	and	r24, r24
+ 73c:	51 f7       	brne	.-44     	; 0x712 <LCD_putc+0x10>
+							// таблица там не полная, не 255 байт.
+
+	y = BLOCK(x,y+1,5,(u16)symboltable+sym*5);	// Закатываем этот блок. 
+	string++;									// Не забывая увеличивать указатель,
+	}
+}
+ 73e:	df 91       	pop	r29
+ 740:	cf 91       	pop	r28
+ 742:	1f 91       	pop	r17
+ 744:	0f 91       	pop	r16
+ 746:	08 95       	ret
+
+00000748 <LCD_INIT>:
+
+
+// Инициализация дисплея.
+void LCD_INIT(void)
+{
+LCD_PORT_INIT;			// Выставляем правильным образом порт
+ 748:	8f ef       	ldi	r24, 0xFF	; 255
+ 74a:	8a bb       	out	0x1a, r24	; 26
+ 74c:	1b ba       	out	0x1b, r1	; 27
+ 74e:	87 b3       	in	r24, 0x17	; 23
+ 750:	8f 67       	ori	r24, 0x7F	; 127
+ 752:	87 bb       	out	0x17, r24	; 23
+ 754:	88 b3       	in	r24, 0x18	; 24
+ 756:	88 63       	ori	r24, 0x38	; 56
+ 758:	88 bb       	out	0x18, r24	; 24
+LCD_RST;				// Даем дисплею сброс (сбрасываются адреса, но не видеопамять)
+ 75a:	c5 98       	cbi	0x18, 5	; 24
+	...
+ 768:	c5 9a       	sbi	0x18, 5	; 24
+    milliseconds can be achieved.
+ */
+void
+_delay_loop_2(uint16_t __count)
+{
+	__asm__ volatile (
+ 76a:	80 e2       	ldi	r24, 0x20	; 32
+ 76c:	9e e4       	ldi	r25, 0x4E	; 78
+ 76e:	01 97       	sbiw	r24, 0x01	; 1
+ 770:	f1 f7       	brne	.-4      	; 0x76e <LCD_INIT+0x26>
+_delay_ms(10);						// Ждем на всякий случай (попробовать убрать нахер)
+LCD_WR_COM(0x3F,(1<<CS1|1<<CS2));	// Включаем дисплей
+ 772:	8f e3       	ldi	r24, 0x3F	; 63
+ 774:	68 e1       	ldi	r22, 0x18	; 24
+ 776:	0e 94 e4 01 	call	0x3c8	; 0x3c8 <LCD_WR_COM>
+LCD_WR_COM(0x40,(1<<CS1|1<<CS2));	// Устанавливаем нулевой адрес
+ 77a:	80 e4       	ldi	r24, 0x40	; 64
+ 77c:	68 e1       	ldi	r22, 0x18	; 24
+ 77e:	0e 94 e4 01 	call	0x3c8	; 0x3c8 <LCD_WR_COM>
+LCD_WR_COM(0xB8,(1<<CS1|1<<CS2));	
+ 782:	88 eb       	ldi	r24, 0xB8	; 184
+ 784:	68 e1       	ldi	r22, 0x18	; 24
+ 786:	0e 94 e4 01 	call	0x3c8	; 0x3c8 <LCD_WR_COM>
+LCD_WR_COM(0xC0,(1<<CS1|1<<CS2));
+ 78a:	80 ec       	ldi	r24, 0xC0	; 192
+ 78c:	68 e1       	ldi	r22, 0x18	; 24
+ 78e:	0e 94 e4 01 	call	0x3c8	; 0x3c8 <LCD_WR_COM>
+LCD_FILL(0);						// Заливаем нулем. Очистка экрана. 
+ 792:	80 e0       	ldi	r24, 0x00	; 0
+ 794:	0e 94 72 02 	call	0x4e4	; 0x4e4 <LCD_FILL>
+}
+ 798:	08 95       	ret
+
+0000079a <_exit>:
+ 79a:	f8 94       	cli
+
+0000079c <__stop_program>:
+ 79c:	ff cf       	rjmp	.-2      	; 0x79c <__stop_program>
