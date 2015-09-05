@@ -29,7 +29,7 @@ ISR(USART0_UDRE_vect)
 		uart_0_txrd = (rd+1) & UART_BUFEND_0_;
 		return;
 	};
-	UCSR0B &= ~(1<<UDRIE);
+	UCSR0B &= ~(1<<UDRIE0);
 };
 //****************************************************************************************
 uint8_t uart_0_rx_count()
@@ -57,7 +57,7 @@ void uart_0_write(uint8_t byte)
 	{
 		uart_0_tx[uart_0_txwr] = byte;
 		uart_0_txwr = wr;
-		UCSR0B |= (1<<UDRIE);
+		UCSR0B |= (1<<UDRIE0);
 	};
 };
 //****************************************************************************************
@@ -67,7 +67,7 @@ void uart_0_init()
 	//UBRR0H = ((F_CPU+UART_RATE/8)/(UART_RATE/16)-1)>>8;
 	UBRR0L = F_CPU/UART_BAUD_RATE_0_/16-1;
 	UBRR0H = (F_CPU/UART_BAUD_RATE_0_/16-1)>>8;
-	UCSR0B = (1<<RXCIE)|(1<<RXEN)|(1<<TXEN);
+	UCSR0B = (1<<RXCIE0)|(1<<RXEN0)|(1<<TXEN0);
 	//UCSR0C = (1<<UPM0)|(1<<UPM1);
 };
 //****************************************************************************************
