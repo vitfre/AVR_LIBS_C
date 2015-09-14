@@ -1,0 +1,1 @@
+http://chipenable.ru/index.php/programming-avr/item/147-semisegmentnyj-indikator.html

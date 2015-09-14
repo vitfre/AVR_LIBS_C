@@ -1,0 +1,803 @@
+
+SPI_ShiftReg.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         000003b2  00000000  00000000  00000074  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .bss          00000017  00800060  00800060  00000426  2**0
+                  ALLOC
+  2 .stab         000006cc  00000000  00000000  00000428  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  3 .stabstr      00000085  00000000  00000000  00000af4  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  4 .debug_aranges 000000e0  00000000  00000000  00000b80  2**3
+                  CONTENTS, READONLY, DEBUGGING
+  5 .debug_info   000009bc  00000000  00000000  00000c60  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_abbrev 0000033b  00000000  00000000  0000161c  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_line   00000607  00000000  00000000  00001957  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_frame  00000118  00000000  00000000  00001f60  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_str    00000213  00000000  00000000  00002078  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_loc    00000563  00000000  00000000  0000228b  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_ranges 00000018  00000000  00000000  000027ee  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	0c 94 3b 00 	jmp	0x76	; 0x76 <__ctors_end>
+   4:	0c 94 58 00 	jmp	0xb0	; 0xb0 <__bad_interrupt>
+   8:	0c 94 58 00 	jmp	0xb0	; 0xb0 <__bad_interrupt>
+   c:	0c 94 58 00 	jmp	0xb0	; 0xb0 <__bad_interrupt>
+  10:	0c 94 58 00 	jmp	0xb0	; 0xb0 <__bad_interrupt>
+  14:	0c 94 58 00 	jmp	0xb0	; 0xb0 <__bad_interrupt>
+  18:	0c 94 58 00 	jmp	0xb0	; 0xb0 <__bad_interrupt>
+  1c:	0c 94 58 00 	jmp	0xb0	; 0xb0 <__bad_interrupt>
+  20:	0c 94 58 00 	jmp	0xb0	; 0xb0 <__bad_interrupt>
+  24:	0c 94 58 00 	jmp	0xb0	; 0xb0 <__bad_interrupt>
+  28:	0c 94 58 00 	jmp	0xb0	; 0xb0 <__bad_interrupt>
+  2c:	0c 94 58 00 	jmp	0xb0	; 0xb0 <__bad_interrupt>
+  30:	0c 94 58 00 	jmp	0xb0	; 0xb0 <__bad_interrupt>
+  34:	0c 94 58 00 	jmp	0xb0	; 0xb0 <__bad_interrupt>
+  38:	0c 94 58 00 	jmp	0xb0	; 0xb0 <__bad_interrupt>
+  3c:	0c 94 58 00 	jmp	0xb0	; 0xb0 <__bad_interrupt>
+  40:	0c 94 58 00 	jmp	0xb0	; 0xb0 <__bad_interrupt>
+  44:	0c 94 58 00 	jmp	0xb0	; 0xb0 <__bad_interrupt>
+  48:	0c 94 58 00 	jmp	0xb0	; 0xb0 <__bad_interrupt>
+  4c:	0c 94 58 00 	jmp	0xb0	; 0xb0 <__bad_interrupt>
+  50:	0c 94 58 00 	jmp	0xb0	; 0xb0 <__bad_interrupt>
+
+00000054 <mask>:
+  54:	01 02 04 08 10 20 40 80                             ..... @.
+
+0000005c <digit>:
+  5c:	00 01 02 03 04 05 06 07 08 09 0a 0b 0c 0d 0e 0f     ................
+
+0000006c <number>:
+  6c:	3f 06 5b 4f 66 6d 7d 07 7f 6f                       ?.[Ofm}..o
+
+00000076 <__ctors_end>:
+  76:	11 24       	eor	r1, r1
+  78:	1f be       	out	0x3f, r1	; 63
+  7a:	cf e5       	ldi	r28, 0x5F	; 95
+  7c:	d4 e0       	ldi	r29, 0x04	; 4
+  7e:	de bf       	out	0x3e, r29	; 62
+  80:	cd bf       	out	0x3d, r28	; 61
+
+00000082 <__do_copy_data>:
+  82:	10 e0       	ldi	r17, 0x00	; 0
+  84:	a0 e6       	ldi	r26, 0x60	; 96
+  86:	b0 e0       	ldi	r27, 0x00	; 0
+  88:	e2 eb       	ldi	r30, 0xB2	; 178
+  8a:	f3 e0       	ldi	r31, 0x03	; 3
+  8c:	02 c0       	rjmp	.+4      	; 0x92 <__do_copy_data+0x10>
+  8e:	05 90       	lpm	r0, Z+
+  90:	0d 92       	st	X+, r0
+  92:	a0 36       	cpi	r26, 0x60	; 96
+  94:	b1 07       	cpc	r27, r17
+  96:	d9 f7       	brne	.-10     	; 0x8e <__do_copy_data+0xc>
+
+00000098 <__do_clear_bss>:
+  98:	10 e0       	ldi	r17, 0x00	; 0
+  9a:	a0 e6       	ldi	r26, 0x60	; 96
+  9c:	b0 e0       	ldi	r27, 0x00	; 0
+  9e:	01 c0       	rjmp	.+2      	; 0xa2 <.do_clear_bss_start>
+
+000000a0 <.do_clear_bss_loop>:
+  a0:	1d 92       	st	X+, r1
+
+000000a2 <.do_clear_bss_start>:
+  a2:	a7 37       	cpi	r26, 0x77	; 119
+  a4:	b1 07       	cpc	r27, r17
+  a6:	e1 f7       	brne	.-8      	; 0xa0 <.do_clear_bss_loop>
+  a8:	0e 94 8b 01 	call	0x316	; 0x316 <main>
+  ac:	0c 94 d7 01 	jmp	0x3ae	; 0x3ae <_exit>
+
+000000b0 <__bad_interrupt>:
+  b0:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+
+000000b4 <IND_Init>:
+  for(i = 0; i < IND_AMOUNT_NUM; i++){
+     IND_PORT_DIG |= (1<<read_byte_flash(digit[i]));
+     IND_DDR_DIG |= (1<<read_byte_flash(digit[i]));
+  }
+#else 
+    SPI_Init();  
+  b4:	0e 94 51 01 	call	0x2a2	; 0x2a2 <SPI_Init>
+  b8:	e7 e6       	ldi	r30, 0x67	; 103
+  ba:	f0 e0       	ldi	r31, 0x00	; 0
+   (1<<IND_COM)
+};
+#endif 
+
+/******************************************************************************/
+void IND_Init(void)
+  bc:	cf 01       	movw	r24, r30
+  be:	40 96       	adiw	r24, 0x10	; 16
+#else 
+    SPI_Init();  
+#endif   
+
+  for(i = 0; i < IND_AMOUNT_NUM; i++) {
+     ind_buf[i] = 0;
+  c0:	11 92       	st	Z+, r1
+  }
+#else 
+    SPI_Init();  
+#endif   
+
+  for(i = 0; i < IND_AMOUNT_NUM; i++) {
+  c2:	e8 17       	cp	r30, r24
+  c4:	f9 07       	cpc	r31, r25
+  c6:	e1 f7       	brne	.-8      	; 0xc0 <IND_Init+0xc>
+     ind_buf[i] = 0;
+  }
+}
+  c8:	08 95       	ret
+
+000000ca <IND_Output>:
+
+/******************************************************************************/
+void IND_Output(uint16_t value, uint8_t comma)
+{
+  ca:	0f 93       	push	r16
+  cc:	1f 93       	push	r17
+  ce:	cf 93       	push	r28
+  d0:	df 93       	push	r29
+  d2:	46 2f       	mov	r20, r22
+  d4:	c7 e6       	ldi	r28, 0x67	; 103
+  d6:	d0 e0       	ldi	r29, 0x00	; 0
+     ind_buf[i] = 0;
+  }
+}
+
+/******************************************************************************/
+void IND_Output(uint16_t value, uint8_t comma)
+  d8:	8e 01       	movw	r16, r28
+  da:	00 5f       	subi	r16, 0xF0	; 240
+  dc:	1f 4f       	sbci	r17, 0xFF	; 255
+{
+  uint8_t tmp;    
+  uint8_t i;
+  
+  for(i = 0; i < IND_AMOUNT_NUM; i++){
+    tmp = value % 10;
+  de:	2a e0       	ldi	r18, 0x0A	; 10
+  e0:	30 e0       	ldi	r19, 0x00	; 0
+  e2:	b9 01       	movw	r22, r18
+  e4:	0e 94 c3 01 	call	0x386	; 0x386 <__udivmodhi4>
+  e8:	fc 01       	movw	r30, r24
+    value = value/10;
+  ea:	86 2f       	mov	r24, r22
+  ec:	97 2f       	mov	r25, r23
+    ind_buf[i] = read_byte_flash(number[tmp]);
+  ee:	e4 59       	subi	r30, 0x94	; 148
+  f0:	ff 4f       	sbci	r31, 0xFF	; 255
+  f2:	e4 91       	lpm	r30, Z
+  f4:	e9 93       	st	Y+, r30
+void IND_Output(uint16_t value, uint8_t comma)
+{
+  uint8_t tmp;    
+  uint8_t i;
+  
+  for(i = 0; i < IND_AMOUNT_NUM; i++){
+  f6:	c0 17       	cp	r28, r16
+  f8:	d1 07       	cpc	r29, r17
+  fa:	99 f7       	brne	.-26     	; 0xe2 <IND_Output+0x18>
+    tmp = value % 10;
+    value = value/10;
+    ind_buf[i] = read_byte_flash(number[tmp]);
+  }
+
+  if ((comma <= IND_AMOUNT_NUM) && (comma != 0)) {
+  fc:	84 2f       	mov	r24, r20
+  fe:	81 50       	subi	r24, 0x01	; 1
+ 100:	80 31       	cpi	r24, 0x10	; 16
+ 102:	38 f4       	brcc	.+14     	; 0x112 <IND_Output+0x48>
+    ind_buf[comma-1] |= 1<<IND_COM;
+ 104:	e4 2f       	mov	r30, r20
+ 106:	f0 e0       	ldi	r31, 0x00	; 0
+ 108:	ea 59       	subi	r30, 0x9A	; 154
+ 10a:	ff 4f       	sbci	r31, 0xFF	; 255
+ 10c:	80 81       	ld	r24, Z
+ 10e:	80 68       	ori	r24, 0x80	; 128
+ 110:	80 83       	st	Z, r24
+  }
+}
+ 112:	df 91       	pop	r29
+ 114:	cf 91       	pop	r28
+ 116:	1f 91       	pop	r17
+ 118:	0f 91       	pop	r16
+ 11a:	08 95       	ret
+
+0000011c <IND_OutputFormat>:
+
+/******************************************************************************/
+void IND_OutputFormat(uint16_t value, uint8_t comma, uint8_t position, uint8_t amount)
+{
+ 11c:	ff 92       	push	r15
+ 11e:	0f 93       	push	r16
+ 120:	1f 93       	push	r17
+ 122:	cf 93       	push	r28
+ 124:	df 93       	push	r29
+ 126:	ec 01       	movw	r28, r24
+ 128:	f6 2e       	mov	r15, r22
+ 12a:	32 2f       	mov	r19, r18
+  uint8_t tmp;
+  uint8_t i;
+  
+  if ((position <= IND_AMOUNT_NUM)&&(position != 0)){
+ 12c:	84 2f       	mov	r24, r20
+ 12e:	81 50       	subi	r24, 0x01	; 1
+ 130:	80 31       	cpi	r24, 0x10	; 16
+ 132:	a0 f5       	brcc	.+104    	; 0x19c <IND_OutputFormat+0x80>
+     for(i = 0; i < amount; i++){
+ 134:	22 23       	and	r18, r18
+ 136:	91 f1       	breq	.+100    	; 0x19c <IND_OutputFormat+0x80>
+        tmp = value % 10;
+        value = value/10;
+        ind_buf[position-1] = read_byte_flash(number[tmp]);
+ 138:	ce 01       	movw	r24, r28
+ 13a:	6a e0       	ldi	r22, 0x0A	; 10
+ 13c:	70 e0       	ldi	r23, 0x00	; 0
+ 13e:	0e 94 c3 01 	call	0x386	; 0x386 <__udivmodhi4>
+ 142:	fc 01       	movw	r30, r24
+ 144:	e4 59       	subi	r30, 0x94	; 148
+ 146:	ff 4f       	sbci	r31, 0xFF	; 255
+ 148:	e4 91       	lpm	r30, Z
+ 14a:	a4 2f       	mov	r26, r20
+ 14c:	b0 e0       	ldi	r27, 0x00	; 0
+ 14e:	aa 59       	subi	r26, 0x9A	; 154
+ 150:	bf 4f       	sbci	r27, 0xFF	; 255
+ 152:	ec 93       	st	X, r30
+        position++;
+ 154:	24 2f       	mov	r18, r20
+ 156:	2f 5f       	subi	r18, 0xFF	; 255
+        if (position > IND_AMOUNT_NUM){
+ 158:	21 31       	cpi	r18, 0x11	; 17
+ 15a:	00 f5       	brcc	.+64     	; 0x19c <IND_OutputFormat+0x80>
+  uint8_t i;
+  
+  if ((position <= IND_AMOUNT_NUM)&&(position != 0)){
+     for(i = 0; i < amount; i++){
+        tmp = value % 10;
+        value = value/10;
+ 15c:	ce 01       	movw	r24, r28
+ 15e:	6a e0       	ldi	r22, 0x0A	; 10
+ 160:	70 e0       	ldi	r23, 0x00	; 0
+ 162:	0e 94 c3 01 	call	0x386	; 0x386 <__udivmodhi4>
+ 166:	86 2f       	mov	r24, r22
+ 168:	97 2f       	mov	r25, r23
+    ind_buf[comma-1] |= 1<<IND_COM;
+  }
+}
+
+/******************************************************************************/
+void IND_OutputFormat(uint16_t value, uint8_t comma, uint8_t position, uint8_t amount)
+ 16a:	43 0f       	add	r20, r19
+  uint8_t tmp;
+  uint8_t i;
+  
+  if ((position <= IND_AMOUNT_NUM)&&(position != 0)){
+     for(i = 0; i < amount; i++){
+        tmp = value % 10;
+ 16c:	ca e0       	ldi	r28, 0x0A	; 10
+ 16e:	d0 e0       	ldi	r29, 0x00	; 0
+        value = value/10;
+        ind_buf[position-1] = read_byte_flash(number[tmp]);
+ 170:	07 e6       	ldi	r16, 0x67	; 103
+ 172:	10 e0       	ldi	r17, 0x00	; 0
+ 174:	11 c0       	rjmp	.+34     	; 0x198 <IND_OutputFormat+0x7c>
+  uint8_t tmp;
+  uint8_t i;
+  
+  if ((position <= IND_AMOUNT_NUM)&&(position != 0)){
+     for(i = 0; i < amount; i++){
+        tmp = value % 10;
+ 176:	be 01       	movw	r22, r28
+ 178:	0e 94 c3 01 	call	0x386	; 0x386 <__udivmodhi4>
+ 17c:	fc 01       	movw	r30, r24
+        value = value/10;
+ 17e:	86 2f       	mov	r24, r22
+ 180:	97 2f       	mov	r25, r23
+        ind_buf[position-1] = read_byte_flash(number[tmp]);
+ 182:	e4 59       	subi	r30, 0x94	; 148
+ 184:	ff 4f       	sbci	r31, 0xFF	; 255
+ 186:	e4 91       	lpm	r30, Z
+ 188:	d8 01       	movw	r26, r16
+ 18a:	a2 0f       	add	r26, r18
+ 18c:	b1 1d       	adc	r27, r1
+ 18e:	11 97       	sbiw	r26, 0x01	; 1
+ 190:	ec 93       	st	X, r30
+        position++;
+ 192:	2f 5f       	subi	r18, 0xFF	; 255
+        if (position > IND_AMOUNT_NUM){
+ 194:	21 31       	cpi	r18, 0x11	; 17
+ 196:	11 f0       	breq	.+4      	; 0x19c <IND_OutputFormat+0x80>
+{
+  uint8_t tmp;
+  uint8_t i;
+  
+  if ((position <= IND_AMOUNT_NUM)&&(position != 0)){
+     for(i = 0; i < amount; i++){
+ 198:	24 17       	cp	r18, r20
+ 19a:	69 f7       	brne	.-38     	; 0x176 <IND_OutputFormat+0x5a>
+           break;
+        } 
+     }
+  }
+     
+  if ((comma <= IND_AMOUNT_NUM) && (comma != 0)) {
+ 19c:	8f 2d       	mov	r24, r15
+ 19e:	81 50       	subi	r24, 0x01	; 1
+ 1a0:	80 31       	cpi	r24, 0x10	; 16
+ 1a2:	38 f4       	brcc	.+14     	; 0x1b2 <IND_OutputFormat+0x96>
+    ind_buf[comma-1] |= 1<<IND_COM;
+ 1a4:	ef 2d       	mov	r30, r15
+ 1a6:	f0 e0       	ldi	r31, 0x00	; 0
+ 1a8:	ea 59       	subi	r30, 0x9A	; 154
+ 1aa:	ff 4f       	sbci	r31, 0xFF	; 255
+ 1ac:	80 81       	ld	r24, Z
+ 1ae:	80 68       	ori	r24, 0x80	; 128
+ 1b0:	80 83       	st	Z, r24
+  }
+}
+ 1b2:	df 91       	pop	r29
+ 1b4:	cf 91       	pop	r28
+ 1b6:	1f 91       	pop	r17
+ 1b8:	0f 91       	pop	r16
+ 1ba:	ff 90       	pop	r15
+ 1bc:	08 95       	ret
+
+000001be <IND_Update>:
+
+/******************************************************************************/
+void IND_Update(void)
+{
+ 1be:	cf 93       	push	r28
+ 1c0:	df 93       	push	r29
+ #else 
+  uint8_t tmp;
+ #endif
+  
+  /*гасим индикатор*/
+  IND_LightOutSeg(spi_buf[IND_SHIFT_REG_SEG],IND_LIGHT_OUT);
+ 1c2:	8f ef       	ldi	r24, 0xFF	; 255
+ 1c4:	80 93 66 00 	sts	0x0066, r24
+ 1c8:	80 e0       	ldi	r24, 0x00	; 0
+ 1ca:	90 e0       	ldi	r25, 0x00	; 0
+  
+  tmp = 0;
+ 1cc:	20 e0       	ldi	r18, 0x00	; 0
+ 1ce:	30 e0       	ldi	r19, 0x00	; 0
+  for (i = 0; i < IND_AMOUNT_NUM; i++){
+     tmp |= (1<<read_byte_flash(digit[i]));  
+ 1d0:	41 e0       	ldi	r20, 0x01	; 1
+ 1d2:	50 e0       	ldi	r21, 0x00	; 0
+ 1d4:	fc 01       	movw	r30, r24
+ 1d6:	e4 5a       	subi	r30, 0xA4	; 164
+ 1d8:	ff 4f       	sbci	r31, 0xFF	; 255
+ 1da:	e4 91       	lpm	r30, Z
+ 1dc:	ba 01       	movw	r22, r20
+ 1de:	02 c0       	rjmp	.+4      	; 0x1e4 <IND_Update+0x26>
+ 1e0:	66 0f       	add	r22, r22
+ 1e2:	77 1f       	adc	r23, r23
+ 1e4:	ea 95       	dec	r30
+ 1e6:	e2 f7       	brpl	.-8      	; 0x1e0 <IND_Update+0x22>
+ 1e8:	26 2b       	or	r18, r22
+ 1ea:	37 2b       	or	r19, r23
+ 1ec:	01 96       	adiw	r24, 0x01	; 1
+  
+  /*гасим индикатор*/
+  IND_LightOutSeg(spi_buf[IND_SHIFT_REG_SEG],IND_LIGHT_OUT);
+  
+  tmp = 0;
+  for (i = 0; i < IND_AMOUNT_NUM; i++){
+ 1ee:	80 31       	cpi	r24, 0x10	; 16
+ 1f0:	91 05       	cpc	r25, r1
+ 1f2:	81 f7       	brne	.-32     	; 0x1d4 <IND_Update+0x16>
+     tmp |= (1<<read_byte_flash(digit[i]));  
+  }
+  IND_LightOutDig(spi_buf[IND_SHIFT_REG_DIG1],((uint8_t)tmp));
+ 1f4:	92 2f       	mov	r25, r18
+ 1f6:	90 95       	com	r25
+ 1f8:	80 91 65 00 	lds	r24, 0x0065
+ 1fc:	89 23       	and	r24, r25
+ 1fe:	80 93 65 00 	sts	0x0065, r24
+  
+ #ifdef IND_SHIFT_REG_DIG2  
+  IND_LightOutDig(spi_buf[IND_SHIFT_REG_DIG2],(tmp>>8));
+ 202:	e5 e6       	ldi	r30, 0x65	; 101
+ 204:	f0 e0       	ldi	r31, 0x00	; 0
+ 206:	93 2f       	mov	r25, r19
+ 208:	90 95       	com	r25
+ 20a:	82 91       	ld	r24, -Z
+ 20c:	89 23       	and	r24, r25
+ 20e:	80 83       	st	Z, r24
+ #endif  
+  
+  SPI_WriteArray(IND_AMOUNT_REG, spi_buf); 
+ 210:	83 e0       	ldi	r24, 0x03	; 3
+ 212:	bf 01       	movw	r22, r30
+ 214:	0e 94 66 01 	call	0x2cc	; 0x2cc <SPI_WriteArray>
+ #ifdef IND_SCAN_SEGMENT
+ /*___________реализация посегментной развертки___________*/ 
+  
+  tmp = 0;
+  for (i = 0; i < IND_AMOUNT_NUM; i++){
+    if (ind_buf[i]&read_byte_flash(mask[count])) {
+ 218:	e0 91 60 00 	lds	r30, 0x0060
+ 21c:	f0 e0       	ldi	r31, 0x00	; 0
+ 21e:	ec 5a       	subi	r30, 0xAC	; 172
+ 220:	ff 4f       	sbci	r31, 0xFF	; 255
+ 222:	a7 e6       	ldi	r26, 0x67	; 103
+ 224:	b0 e0       	ldi	r27, 0x00	; 0
+ 226:	80 e0       	ldi	r24, 0x00	; 0
+ 228:	90 e0       	ldi	r25, 0x00	; 0
+  SPI_WriteArray(IND_AMOUNT_REG, spi_buf); 
+
+ #ifdef IND_SCAN_SEGMENT
+ /*___________реализация посегментной развертки___________*/ 
+  
+  tmp = 0;
+ 22a:	20 e0       	ldi	r18, 0x00	; 0
+ 22c:	30 e0       	ldi	r19, 0x00	; 0
+  for (i = 0; i < IND_AMOUNT_NUM; i++){
+    if (ind_buf[i]&read_byte_flash(mask[count])) {
+ 22e:	64 91       	lpm	r22, Z
+       tmp |= (1<<read_byte_flash(digit[i]));
+ 230:	41 e0       	ldi	r20, 0x01	; 1
+ 232:	50 e0       	ldi	r21, 0x00	; 0
+ #ifdef IND_SCAN_SEGMENT
+ /*___________реализация посегментной развертки___________*/ 
+  
+  tmp = 0;
+  for (i = 0; i < IND_AMOUNT_NUM; i++){
+    if (ind_buf[i]&read_byte_flash(mask[count])) {
+ 234:	7d 91       	ld	r23, X+
+ 236:	76 23       	and	r23, r22
+ 238:	61 f0       	breq	.+24     	; 0x252 <IND_Update+0x94>
+       tmp |= (1<<read_byte_flash(digit[i]));
+ 23a:	fc 01       	movw	r30, r24
+ 23c:	e4 5a       	subi	r30, 0xA4	; 164
+ 23e:	ff 4f       	sbci	r31, 0xFF	; 255
+ 240:	e4 91       	lpm	r30, Z
+ 242:	ea 01       	movw	r28, r20
+ 244:	02 c0       	rjmp	.+4      	; 0x24a <IND_Update+0x8c>
+ 246:	cc 0f       	add	r28, r28
+ 248:	dd 1f       	adc	r29, r29
+ 24a:	ea 95       	dec	r30
+ 24c:	e2 f7       	brpl	.-8      	; 0x246 <IND_Update+0x88>
+ 24e:	2c 2b       	or	r18, r28
+ 250:	3d 2b       	or	r19, r29
+ 252:	01 96       	adiw	r24, 0x01	; 1
+
+ #ifdef IND_SCAN_SEGMENT
+ /*___________реализация посегментной развертки___________*/ 
+  
+  tmp = 0;
+  for (i = 0; i < IND_AMOUNT_NUM; i++){
+ 254:	80 31       	cpi	r24, 0x10	; 16
+ 256:	91 05       	cpc	r25, r1
+ 258:	69 f7       	brne	.-38     	; 0x234 <IND_Update+0x76>
+    if (ind_buf[i]&read_byte_flash(mask[count])) {
+       tmp |= (1<<read_byte_flash(digit[i]));
+    }
+  }
+  IND_OutDig(spi_buf[IND_SHIFT_REG_DIG1], ((uint8_t)tmp));  
+ 25a:	80 91 65 00 	lds	r24, 0x0065
+ 25e:	82 2b       	or	r24, r18
+ 260:	80 93 65 00 	sts	0x0065, r24
+  
+ #ifdef IND_SHIFT_REG_DIG2  
+  IND_OutDig(spi_buf[IND_SHIFT_REG_DIG2],(tmp>>8));
+ 264:	a5 e6       	ldi	r26, 0x65	; 101
+ 266:	b0 e0       	ldi	r27, 0x00	; 0
+ 268:	8e 91       	ld	r24, -X
+ 26a:	83 2b       	or	r24, r19
+ 26c:	8c 93       	st	X, r24
+ #endif      
+  
+  IND_OutSeg(spi_buf[IND_SHIFT_REG_SEG], read_byte_flash(mask[count])); 
+ 26e:	80 91 60 00 	lds	r24, 0x0060
+ 272:	e8 2f       	mov	r30, r24
+ 274:	f0 e0       	ldi	r31, 0x00	; 0
+ 276:	ec 5a       	subi	r30, 0xAC	; 172
+ 278:	ff 4f       	sbci	r31, 0xFF	; 255
+ 27a:	e4 91       	lpm	r30, Z
+ 27c:	e0 95       	com	r30
+ 27e:	12 96       	adiw	r26, 0x02	; 2
+ 280:	9c 91       	ld	r25, X
+ 282:	12 97       	sbiw	r26, 0x02	; 2
+ 284:	e9 23       	and	r30, r25
+ 286:	12 96       	adiw	r26, 0x02	; 2
+ 288:	ec 93       	st	X, r30
+ 28a:	12 97       	sbiw	r26, 0x02	; 2
+
+  count++;
+ 28c:	8f 5f       	subi	r24, 0xFF	; 255
+  count &= 0x07;
+ 28e:	87 70       	andi	r24, 0x07	; 7
+ 290:	80 93 60 00 	sts	0x0060, r24
+     count = 0;  
+  }
+ #endif
+  
+  /*вывод на индикатор*/
+  SPI_WriteArray(IND_AMOUNT_REG, spi_buf); 
+ 294:	83 e0       	ldi	r24, 0x03	; 3
+ 296:	bd 01       	movw	r22, r26
+ 298:	0e 94 66 01 	call	0x2cc	; 0x2cc <SPI_WriteArray>
+  if (count >= IND_AMOUNT_NUM){
+     count = 0;  
+  }
+ #endif
+#endif 
+}
+ 29c:	df 91       	pop	r29
+ 29e:	cf 91       	pop	r28
+ 2a0:	08 95       	ret
+
+000002a2 <SPI_Init>:
+/*инициализация SPI*/
+void SPI_Init(void)
+{
+  /*настройка портов ввода-вывода
+  все выводы, кроме MISO выходы*/
+  SPI_DDRX = (1<<SPI_MOSI)|(1<<SPI_SCK)|(1<<SPI_SS)|(0<<SPI_MISO);
+ 2a2:	80 eb       	ldi	r24, 0xB0	; 176
+ 2a4:	87 bb       	out	0x17, r24	; 23
+  SPI_PORTX = (1<<SPI_MOSI)|(1<<SPI_SCK)|(1<<SPI_SS)|(1<<SPI_MISO);
+ 2a6:	80 ef       	ldi	r24, 0xF0	; 240
+ 2a8:	88 bb       	out	0x18, r24	; 24
+   
+  /*разрешение spi,старший бит вперед,мастер, режим 0*/
+  SPCR = (1<<SPE)|(0<<DORD)|(1<<MSTR)|(0<<CPOL)|(0<<CPHA)|(1<<SPR1)|(0<<SPR0);
+ 2aa:	82 e5       	ldi	r24, 0x52	; 82
+ 2ac:	8d b9       	out	0x0d, r24	; 13
+  SPSR = (0<<SPI2X);
+ 2ae:	1e b8       	out	0x0e, r1	; 14
+}
+ 2b0:	08 95       	ret
+
+000002b2 <SPI_WriteByte>:
+
+/*отослать байт данных по SPI*/
+void SPI_WriteByte(uint8_t data)
+{
+   SPI_PORTX &= ~(1<<SPI_SS); 
+ 2b2:	c4 98       	cbi	0x18, 4	; 24
+   SPDR = data;
+ 2b4:	8f b9       	out	0x0f, r24	; 15
+   while(!(SPSR & (1<<SPIF)));
+ 2b6:	77 9b       	sbis	0x0e, 7	; 14
+ 2b8:	fe cf       	rjmp	.-4      	; 0x2b6 <SPI_WriteByte+0x4>
+   SPI_PORTX |= (1<<SPI_SS); 
+ 2ba:	c4 9a       	sbi	0x18, 4	; 24
+}
+ 2bc:	08 95       	ret
+
+000002be <SPI_ReadByte>:
+/*отослать и получить байт данных по SPI*/
+uint8_t SPI_ReadByte(uint8_t data)
+{
+   uint8_t report;
+   
+   SPI_PORTX &= ~(1<<SPI_SS);
+ 2be:	c4 98       	cbi	0x18, 4	; 24
+   SPDR = data;
+ 2c0:	8f b9       	out	0x0f, r24	; 15
+   while(!(SPSR & (1<<SPIF)));
+ 2c2:	77 9b       	sbis	0x0e, 7	; 14
+ 2c4:	fe cf       	rjmp	.-4      	; 0x2c2 <SPI_ReadByte+0x4>
+   report = SPDR;
+ 2c6:	8f b1       	in	r24, 0x0f	; 15
+   SPI_PORTX |= (1<<SPI_SS); 
+ 2c8:	c4 9a       	sbi	0x18, 4	; 24
+  
+   return report; 
+}
+ 2ca:	08 95       	ret
+
+000002cc <SPI_WriteArray>:
+
+/*отправить несколько байт данных по SPI*/
+void SPI_WriteArray(uint8_t num, uint8_t *data)
+{
+ 2cc:	fb 01       	movw	r30, r22
+   SPI_PORTX &= ~(1<<SPI_SS); 
+ 2ce:	c4 98       	cbi	0x18, 4	; 24
+  
+   return report; 
+}
+
+/*отправить несколько байт данных по SPI*/
+void SPI_WriteArray(uint8_t num, uint8_t *data)
+ 2d0:	9b 01       	movw	r18, r22
+ 2d2:	28 0f       	add	r18, r24
+ 2d4:	31 1d       	adc	r19, r1
+ 2d6:	c9 01       	movw	r24, r18
+{
+   SPI_PORTX &= ~(1<<SPI_SS); 
+   while(num--){
+ 2d8:	04 c0       	rjmp	.+8      	; 0x2e2 <SPI_WriteArray+0x16>
+      SPDR = *data++;
+ 2da:	21 91       	ld	r18, Z+
+ 2dc:	2f b9       	out	0x0f, r18	; 15
+      while(!(SPSR & (1<<SPIF)));
+ 2de:	77 9b       	sbis	0x0e, 7	; 14
+ 2e0:	fe cf       	rjmp	.-4      	; 0x2de <SPI_WriteArray+0x12>
+
+/*отправить несколько байт данных по SPI*/
+void SPI_WriteArray(uint8_t num, uint8_t *data)
+{
+   SPI_PORTX &= ~(1<<SPI_SS); 
+   while(num--){
+ 2e2:	e8 17       	cp	r30, r24
+ 2e4:	f9 07       	cpc	r31, r25
+ 2e6:	c9 f7       	brne	.-14     	; 0x2da <SPI_WriteArray+0xe>
+      SPDR = *data++;
+      while(!(SPSR & (1<<SPIF)));
+   }
+   SPI_PORTX |= (1<<SPI_SS); 
+ 2e8:	c4 9a       	sbi	0x18, 4	; 24
+}
+ 2ea:	08 95       	ret
+
+000002ec <SPI_ReadArray>:
+
+/*отправить и получить несколько байт данных по SPI*/
+void SPI_ReadArray(uint8_t num, uint8_t *data)
+{
+ 2ec:	fb 01       	movw	r30, r22
+   SPI_PORTX &= ~(1<<SPI_SS); 
+ 2ee:	c4 98       	cbi	0x18, 4	; 24
+   while(num--){
+ 2f0:	88 23       	and	r24, r24
+ 2f2:	79 f0       	breq	.+30     	; 0x312 <SPI_ReadArray+0x26>
+ 2f4:	81 50       	subi	r24, 0x01	; 1
+   }
+   SPI_PORTX |= (1<<SPI_SS); 
+}
+
+/*отправить и получить несколько байт данных по SPI*/
+void SPI_ReadArray(uint8_t num, uint8_t *data)
+ 2f6:	9b 01       	movw	r18, r22
+ 2f8:	28 0f       	add	r18, r24
+ 2fa:	31 1d       	adc	r19, r1
+ 2fc:	c9 01       	movw	r24, r18
+ 2fe:	01 96       	adiw	r24, 0x01	; 1
+{
+   SPI_PORTX &= ~(1<<SPI_SS); 
+   while(num--){
+      SPDR = *data;
+ 300:	20 81       	ld	r18, Z
+ 302:	2f b9       	out	0x0f, r18	; 15
+      while(!(SPSR & (1<<SPIF)));
+ 304:	77 9b       	sbis	0x0e, 7	; 14
+ 306:	fe cf       	rjmp	.-4      	; 0x304 <SPI_ReadArray+0x18>
+      *data++ = SPDR; 
+ 308:	2f b1       	in	r18, 0x0f	; 15
+ 30a:	21 93       	st	Z+, r18
+
+/*отправить и получить несколько байт данных по SPI*/
+void SPI_ReadArray(uint8_t num, uint8_t *data)
+{
+   SPI_PORTX &= ~(1<<SPI_SS); 
+   while(num--){
+ 30c:	e8 17       	cp	r30, r24
+ 30e:	f9 07       	cpc	r31, r25
+ 310:	b9 f7       	brne	.-18     	; 0x300 <SPI_ReadArray+0x14>
+      SPDR = *data;
+      while(!(SPSR & (1<<SPIF)));
+      *data++ = SPDR; 
+   }
+   SPI_PORTX |= (1<<SPI_SS); 
+ 312:	c4 9a       	sbi	0x18, 4	; 24
+ 314:	08 95       	ret
+
+00000316 <main>:
+uint8_t i = 0;
+uint16_t count = 0;
+
+int main( void )
+{
+	IND_Init();
+ 316:	0e 94 5a 00 	call	0xb4	; 0xb4 <IND_Init>
+	
+	i = 100;
+ 31a:	84 e6       	ldi	r24, 0x64	; 100
+ 31c:	80 93 63 00 	sts	0x0063, r24
+	count = 4328;
+ 320:	88 ee       	ldi	r24, 0xE8	; 232
+ 322:	90 e1       	ldi	r25, 0x10	; 16
+ 324:	90 93 62 00 	sts	0x0062, r25
+ 328:	80 93 61 00 	sts	0x0061, r24
+
+	while(1){
+		if (i == 100) {
+ 32c:	80 91 63 00 	lds	r24, 0x0063
+ 330:	84 36       	cpi	r24, 0x64	; 100
+ 332:	d9 f4       	brne	.+54     	; 0x36a <main+0x54>
+			i = 0;
+ 334:	10 92 63 00 	sts	0x0063, r1
+			IND_OutputFormat(count, 0, 10, 4);
+ 338:	80 91 61 00 	lds	r24, 0x0061
+ 33c:	90 91 62 00 	lds	r25, 0x0062
+ 340:	60 e0       	ldi	r22, 0x00	; 0
+ 342:	4a e0       	ldi	r20, 0x0A	; 10
+ 344:	24 e0       	ldi	r18, 0x04	; 4
+ 346:	0e 94 8e 00 	call	0x11c	; 0x11c <IND_OutputFormat>
+			IND_OutputFormat(45, 0, 6, 3);
+ 34a:	8d e2       	ldi	r24, 0x2D	; 45
+ 34c:	90 e0       	ldi	r25, 0x00	; 0
+ 34e:	60 e0       	ldi	r22, 0x00	; 0
+ 350:	46 e0       	ldi	r20, 0x06	; 6
+ 352:	23 e0       	ldi	r18, 0x03	; 3
+ 354:	0e 94 8e 00 	call	0x11c	; 0x11c <IND_OutputFormat>
+			count++;
+ 358:	80 91 61 00 	lds	r24, 0x0061
+ 35c:	90 91 62 00 	lds	r25, 0x0062
+ 360:	01 96       	adiw	r24, 0x01	; 1
+ 362:	90 93 62 00 	sts	0x0062, r25
+ 366:	80 93 61 00 	sts	0x0061, r24
+		}
+		IND_Update();
+ 36a:	0e 94 df 00 	call	0x1be	; 0x1be <IND_Update>
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+ 36e:	83 ec       	ldi	r24, 0xC3	; 195
+ 370:	99 e0       	ldi	r25, 0x09	; 9
+ 372:	01 97       	sbiw	r24, 0x01	; 1
+ 374:	f1 f7       	brne	.-4      	; 0x372 <main+0x5c>
+ 376:	00 c0       	rjmp	.+0      	; 0x378 <main+0x62>
+ 378:	00 00       	nop
+		__delay_cycles(10000);
+		i++;
+ 37a:	80 91 63 00 	lds	r24, 0x0063
+ 37e:	8f 5f       	subi	r24, 0xFF	; 255
+ 380:	80 93 63 00 	sts	0x0063, r24
+	}
+ 384:	d3 cf       	rjmp	.-90     	; 0x32c <main+0x16>
+
+00000386 <__udivmodhi4>:
+ 386:	aa 1b       	sub	r26, r26
+ 388:	bb 1b       	sub	r27, r27
+ 38a:	51 e1       	ldi	r21, 0x11	; 17
+ 38c:	07 c0       	rjmp	.+14     	; 0x39c <__udivmodhi4_ep>
+
+0000038e <__udivmodhi4_loop>:
+ 38e:	aa 1f       	adc	r26, r26
+ 390:	bb 1f       	adc	r27, r27
+ 392:	a6 17       	cp	r26, r22
+ 394:	b7 07       	cpc	r27, r23
+ 396:	10 f0       	brcs	.+4      	; 0x39c <__udivmodhi4_ep>
+ 398:	a6 1b       	sub	r26, r22
+ 39a:	b7 0b       	sbc	r27, r23
+
+0000039c <__udivmodhi4_ep>:
+ 39c:	88 1f       	adc	r24, r24
+ 39e:	99 1f       	adc	r25, r25
+ 3a0:	5a 95       	dec	r21
+ 3a2:	a9 f7       	brne	.-22     	; 0x38e <__udivmodhi4_loop>
+ 3a4:	80 95       	com	r24
+ 3a6:	90 95       	com	r25
+ 3a8:	bc 01       	movw	r22, r24
+ 3aa:	cd 01       	movw	r24, r26
+ 3ac:	08 95       	ret
+
+000003ae <_exit>:
+ 3ae:	f8 94       	cli
+
+000003b0 <__stop_program>:
+ 3b0:	ff cf       	rjmp	.-2      	; 0x3b0 <__stop_program>

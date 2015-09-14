@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Atmel Studio Solution File, Format Version 11.00
+Project("{54F91283-7BC4-4236-8FF9-10F437C3AD48}") = "SPI_ShiftReg", "SPI_ShiftReg.cproj", "{12EBBD4D-3A2A-4A74-98BC-95F66B2A3CE1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|AVR = Debug|AVR
+		Release|AVR = Release|AVR
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{12EBBD4D-3A2A-4A74-98BC-95F66B2A3CE1}.Debug|AVR.ActiveCfg = Debug|AVR
+		{12EBBD4D-3A2A-4A74-98BC-95F66B2A3CE1}.Debug|AVR.Build.0 = Debug|AVR
+		{12EBBD4D-3A2A-4A74-98BC-95F66B2A3CE1}.Release|AVR.ActiveCfg = Release|AVR
+		{12EBBD4D-3A2A-4A74-98BC-95F66B2A3CE1}.Release|AVR.Build.0 = Release|AVR
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
