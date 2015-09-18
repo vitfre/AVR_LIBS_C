@@ -13,7 +13,7 @@
 #include <avr/io.h>
 #include <avr/interrupt.h>
 //---------------------------------------------------------------------------------------
-#define UART_BAUD_RATE_1_		9600UL
+#define UART_BAUD_RATE_1_		38400UL//9600UL//76800UL//
 #define UART_BUFSIZE_1_			16UL
 #define UART_BUFEND_1_			(UART_BUFSIZE_1_-1)
 //---------------------------------------------------------------------------------------

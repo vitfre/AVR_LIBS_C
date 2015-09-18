@@ -11,7 +11,6 @@
 #define F_CPU 16000000UL // or whatever may be your frequency
 //---------------------------------------------------------------------------------------
 #include <avr/io.h>
-#include <util/delay.h>
 #include <avr/interrupt.h>
 //---------------------------------------------------------------------------------------
 #define UART_BAUD_RATE_0_		38400UL//9600UL
